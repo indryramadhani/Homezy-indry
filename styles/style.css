@@ -1,0 +1,718 @@
+.hanken-grotesk-700 {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}   
+
+.syne-600 {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    background: #FBFAFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #FBFAFF;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-container a {
+  display: flex;           
+  align-items: center;     
+  gap: 8px;   
+  text-decoration: none;            
+}
+
+.logo-img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #191A23;
+    font-family: "Syne", sans-serif;
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 1rem;
+    color: #191A23;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+nav ul li a svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.contact-btn {
+    padding: 16px 32px;
+    background-color: transparent;
+    color: #191A23;
+    border: 1px solid #191A23;
+    border-radius: 15px;
+    font-size: 1.125rem;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #F7F2FF;
+    border: 1px solid #B592FF;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%; 
+    gap: 48px;
+    min-height: 100vh; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../assets/HeroPattern.svg"); 
+  background-position: right center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-left-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 32px;
+
+  max-width: 763px; 
+  width: 100%;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.hero-text h1 {
+    font-family: "Syne", sans-serif;
+  font-size: 72px;
+  color: #191A23;
+  line-height: 88px;
+  letter-spacing: -4%;
+  width: auto;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-text p {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #686A79;
+  width: 440px;
+  margin: 0;
+}
+
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #191A23;
+  border-radius: 15px;
+  margin: 0;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #E7DCFF;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191A2366;
+}
+
+.search-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.search-label {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #686A79;
+  margin: 0;
+}
+.search-value {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #191A23;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.browse-btn {
+  padding: 18px 40px;
+  background-color: #191A23;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.125rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 22px;
+  cursor: pointer;
+}
+.browse-btn:hover {
+  background-color: transparent;
+  border: 1px solid #191A23;
+  color: #191A23;
+  transition: background-color 0.3s ease;
+}
+
+.hero-right-content {
+  position: relative;
+  width: 514px; 
+  height: 528px; 
+  z-index: 1;
+}
+
+.top-house_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 248px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  gap: 0;
+}
+
+.top-house_image {
+  width: 100%;
+  height: 256px; 
+  border: 2px solid #191A23;
+  border-radius: 40px 40px 32px 0; 
+  overflow: hidden;
+  z-index: 2; 
+  position: relative;
+}
+
+.top-house_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-caption {
+  background-color: #191A23;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  height: 105.4px; 
+  
+  margin-top: 10px; 
+  
+  border-radius: 0 0 40px 40px; 
+  border: 2px solid #E7DCFF;
+  box-sizing: border-box;
+  
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.image-caption p {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.bottom-house {
+  position: absolute;
+  overflow: hidden;
+  width: 248px;
+  height: 340px;
+  bottom: 0;
+  right: 0;
+  border-radius: 40px;
+  border: 2px solid #191A23;
+  z-index: 1;
+}
+
+.bottom-house img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-card {
+  position: absolute;
+  top: 7%;
+  right: 2%;
+
+  width: 253px;
+  background: #ffffff;
+  border: 2px solid #191A23;
+  border-radius: 32px;
+  padding: 16.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.profile-card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-card_name {
+  font-family: "Syne", sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #191A23;
+  line-height: 1.2;
+  letter-spacing: -3%;
+  margin: 0;
+}
+
+.profile-card_role {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #686A79;
+  margin: 0;
+}
+
+.profile-card_avatar img {
+  width: 74px;
+  height: 74px;
+  border-radius: 10px;
+  background-color: #E7DCFF;
+  object-fit: cover;
+}
+
+.profile-card_socials {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.profile-card_socials span {
+  width: 25px;
+  height: 25px;
+  background: #686A79;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.featured {
+  padding: 80px 10%; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.featured-container {
+  max-width: 1200px; 
+  margin: 0 auto;    
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.featured-title {
+  font-family: "Syne", sans-serif;
+  font-size: 40px; 
+  font-weight: 700;
+  color: #191A23; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em; 
+}
+
+.featured_link-all {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #191A23;                
+  text-decoration: none;        
+  display: flex;
+  align-items: center;
+  gap: 8px;                    
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.featured_link-all:hover {
+  opacity: 0.7;                  
+  transform: translateX(4px);    
+
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 40px; 
+}
+
+.featured-card_large {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  background-color: #FFFFFF;
+  border: 1px solid #E7DCFF; 
+  border-radius: 15px;
+  margin-left: 10px;      
+  max-height: 420px;
+}
+
+.featured-image_large {
+  position: relative;
+
+}
+
+.featured-image_large img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.badge-large {
+  position: absolute;
+  top: 32px;
+  left: -7px;
+  z-index: 5;
+}
+
+.card-featured_content {
+  padding: 24px 32px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.large-top_content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.large-price_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.large-price_value {
+  font-family: "Syne", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -3%;
+  color: #191A23;
+  margin: 0;
+}
+
+.large-price_duration {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #686A79;
+  margin: 0;
+}
+
+.agent-info_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.large-agent {
+  display: flex;
+  flex-direction: horizontal;
+  align-items: center;
+  gap: 32px;
+}
+
+.large-agent_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.agent-name {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #191A23;
+  margin: 0;
+}
+
+.agent-role {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #686A79;
+}
+
+.agent-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 39px;
+  object-fit: cover;
+  background-color: #CFB9FD;
+}
+
+.large-info {
+  gap: 28px;
+  flex-direction: vertical;
+}
+
+.large-title {
+  font-family: "Syne", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -4%;
+  color: #191A23;
+  margin: 0;
+}
+
+.loaction-item {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 16px; 
+}
+
+.location-icon {
+  display: block;
+}
+
+.large-location {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #686A79;
+  margin: 0 !important;      
+  padding: 0;                
+  line-height: 28px;          
+}
+
+.large-desc {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #686A79;
+  margin: 0;
+  line-height: 28px;
+}
+
+.large-link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #191A23;                
+  text-decoration: none;        
+  display: inline-block;
+  line-height: 22px;
+  margin-top: 8px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.large-link:hover {
+  opacity: 0.7;                  
+  transform: translateX(4px);    
+}
+
+.large-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  background: #F7F4FF; 
+  padding: 24px;
+  border-radius: 24px;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.featured-list-small {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch; 
+}
+
+.card-small {
+  background: #FFFFFF;
+  border: 2px solid #E7DCFF;
+  border-radius: 15px;
+  margin-left: 10px;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+}
+
+.badge-small {
+  position: absolute; 
+  top: 174px;          
+  left: -8px;         
+  z-index: 10;       
+  display: flex;      
+}
+
+.badge img {
+  height: 32px;       
+  width: auto;
+  display: block;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;
+  z-index: 1;       
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-height: 190px; 
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-small_content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1; 
+}
+
+.card-small_price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .featured-card_large {
+    grid-template-columns: 1fr; 
+  }
+  .featured-list-small {
+    grid-template-columns: 1fr; 
+  }
+}
