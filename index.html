@@ -43,6 +43,16 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/Logo.svg" />
 
+    <!-- Font Awesome -->
+     <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -238,10 +248,10 @@
             <h4 class="profile-card_name">Edwin Martins</h4>
             <p class="profile-card_role">Property Advisor</p>
             <div class="profile-card_socials">
-              <span><i class="fas fa-phone"></i></span>
-              <span><i class="fas fa-camera"></i></span>
-              <span><i class="fab fa-facebook"></i></span>
-              <span><i class="fab fa-twitter"></i></span>
+              <span><img src="assets/call.svg" alt="Profile Social"></span>
+              <span><img src="assets/instagram.svg" alt="Profile Social"></span>
+              <span><img src="assets/facebook.svg" alt="Profile Social"></span>
+              <span><img src="assets/twitter.svg" alt="Profile Social"></span>
             </div>
           </div>
           <div class="profile-card_avatar">
@@ -321,73 +331,462 @@
   </p>
 </div>
 
-              <!-- FEATURES -->
-              <div class="large-features">
-                <div class="feature-item">
-                  🛏 <strong>4</strong>
-                  <span>Bedrooms</span>
+              <div class="property-card">
+                <div class="property-item">
+                  <span class="label">Bedrooms</span>
+                  <div class="content">
+                    <span class="icon"><img src="assets/bed.svg" alt="Property Icon"></span>
+                    <span class="value">4</span>
+                  </div>
                 </div>
-                <div class="feature-item">
-                  🛁 <strong>4</strong>
-                  <span>Bathrooms</span>
+
+                <div class="property-item">
+                  <span class="label">Bathrooms</span>
+                  <div class="content">
+                    <span class="icon"><img src="assets/bath.svg" alt="Property Icon"></span>
+                    <span class="value">4</span>
+                  </div>
                 </div>
-                <div class="feature-item">
-                  📐 <strong>6×8 m²</strong>
-                  <span>Area</span>
+
+                <div class="property-item">
+                  <span class="label">Square Area</span>
+                  <div class="content">
+                    <span class="icon"><img src="assets/surface-area.svg" alt="Property Icon"></span>
+                    <span class="value">6x8 m²</span>
+                  </div>
                 </div>
-                <div class="feature-item">
-                  🏢 <strong>Modern Loft</strong>
-                  <span>Type</span>
+
+                <div class="property-item">
+                  <span class="label">Square Area</span>
+                  <div class="content">
+                    <span class="icon"><img src="assets/repair.svg" alt="Property Icon"></span>
+                    <span class="value">Modern Loft</span>
+                  </div>
                 </div>
               </div>
             </div>
           </article>
 
           <div class="featured-list-small">
-  <article class="card-small">
-    
-    <div class="image-wrapper">
-      <img src="assets/home1.png" alt="Luxury Villa" />
-    </div>
-    <span class="badge-small"
-              ><img src="assets/Featured.svg" alt="Featured Badge"
-            /></span>
-    <div class="card-small_content">
-      <span class="card-small_price">$1,850/mo</span>
-      <h4 class="card-small_title">Luxury Villa</h4>
-      <p class="card-small_location">📍 Miami, FL</p>
-    </div>
-  </article>
+            <article class="card-small">
+              
+              <div class="image-wrapper">
+                <img src="assets/home1.png" alt="Luxury Villa" />
+              </div>
+              <span class="badge-small"
+                        ><img src="assets/Featured.svg" alt="Featured Badge"
+                      /></span>
+              <div class="card-small_content">
+            <span class="card-small_price">$15,000</span>
+            <h4 class="card-small_title">Beach Pros Realty Inc.</h4>
+            <p class="card-small_location">37 Ambleside Gardens, Ilford, IG4 5HH</p>
+            
+            <hr class="divider">
 
-  <article class="card-small">
-    
-    <div class="image-wrapper">
-      <img src="assets/featured-small_1.png" alt="Modern House" />
-    </div>
-    <span class="badge-small"
-              ><img src="assets/Featured.svg" alt="Featured Badge"
-            /></span>
-    <div class="card-small_content">
-      <span class="card-small_price">$1,620/mo</span>
-      <h4 class="card-small_title">Modern House</h4>
-      <p class="card-small_location">📍 Austin, TX</p>
-    </div>
-  </article>
+            <div class="small-property_card">
+              <div class="prop-item">
+                <img src="assets/bed.svg" alt="Bed">
+                <span>3 Beds</span>
+              </div>
+              <div class="prop-item">
+                <img src="assets/bath.svg" alt="Bath">
+                <span>2 Baths</span>
+              </div>
+              <div class="prop-item">
+                <img src="assets/surface-area.svg" alt="Area">
+                <span>5x7 m²</span>
+              </div>
+            </div>
+          </div>
+            </article>
 
-  <article class="card-small">
-    <div class="image-wrapper">
-      <img src="assets/home2.png" alt="Family Home" />
-    </div>
-    <span class="badge-small"
-              ><img src="assets/Featured.svg" alt="Featured Badge"
-            /></span>
-    <div class="card-small_content">
-      <span class="card-small_price">$2,300/mo</span>
-      <h4 class="card-small_title">Family Home</h4>
-      <p class="card-small_location">📍 Denver, CO</p>
-    </div>
-  </article>
-</div>
+            <article class="card-small">
+              
+              <div class="image-wrapper">
+                <img src="assets/featured-small_1.png" alt="Modern House" />
+              </div>
+              <span class="badge-small"
+                        ><img src="assets/Featured.svg" alt="Featured Badge"
+                      /></span>
+              <div class="card-small_content">
+            <span class="card-small_price">$15,000</span>
+            <h4 class="card-small_title">Beach Pros Realty Inc.</h4>
+            <p class="card-small_location">37 Ambleside Gardens, Ilford, IG4 5HH</p>
+            
+            <hr class="divider">
+
+            <div class="small-property_card">
+              <div class="prop-item">
+                <img src="assets/bed.svg" alt="Bed">
+                <span>3 Beds</span>
+              </div>
+              <div class="prop-item">
+                <img src="assets/bath.svg" alt="Bath">
+                <span>2 Baths</span>
+              </div>
+              <div class="prop-item">
+                <img src="assets/surface-area.svg" alt="Area">
+                <span>5x7 m²</span>
+              </div>
+            </div>
+          </div>
+            </article>
+
+            <article class="card-small">
+              <div class="image-wrapper">
+                <img src="assets/home2.png" alt="Family Home" />
+              </div>
+              <span class="badge-small"
+                        ><img src="assets/Featured.svg" alt="Featured Badge"
+                      /></span>
+              <div class="card-small_content">
+            <span class="card-small_price">$15,000</span>
+            <h4 class="card-small_title">Beach Pros Realty Inc.</h4>
+            <p class="card-small_location">37 Ambleside Gardens, Ilford, IG4 5HH</p>
+            
+            <hr class="divider">
+
+            <div class="small-property_card">
+              <div class="prop-item">
+                <img src="assets/bed.svg" alt="Bed">
+                <span>3 Beds</span>
+              </div>
+              <div class="prop-item">
+                <img src="assets/bath.svg" alt="Bath">
+                <span>2 Baths</span>
+              </div>
+              <div class="prop-item">
+                <img src="assets/surface-area.svg" alt="Area">
+                <span>5x7 m²</span>
+              </div>
+            </div>
+          </div>
+            </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefits-container">
+        <div class="benefits-header">
+          <h2 class="benefits-header_title">Comfort Is Our Top Priority For You</h2>
+          <p class="benefits-header_description">We guarantee that the products we sell will make our customers happy because we are very concerned about our consumer satisfaction</p>
+        </div>
+        <div class="benefits-card_list">
+          <div class="benefits-card">
+            <div class="benefits-icon_wrapper">
+              <img src="assets/coin.svg" alt="Support Icon">
+            </div>
+            <div class="benefits-content">
+              <h5 class="benefits-title">
+                Affordable Price
+              </h5>
+              <p class="benefits-text">
+                We provide the best for you. The price we offer accordance with the quality we provide
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-card">
+            <div class="benefits-icon_wrapper">
+              <img src="assets/like-shapes.svg" alt="Support Icon">
+            </div>
+            <div class="benefits-content">
+              <h5 class="benefits-title">
+                Clear Legality
+              </h5>
+              <p class="benefits-text">
+                Put your trust in us. We are a legal entity with official legality in the relevant government
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-card">
+            <div class="benefits-icon_wrapper">
+              <img src="assets/people.svg" alt="Support Icon">
+            </div>
+            <div class="benefits-content">
+              <h5 class="benefits-title">
+                Experienced Agent
+              </h5>
+              <p class="benefits-text">
+                We always work wih agents in their fields so that we can provide the best quality
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="categories-container">
+        <div class="categories-header">
+          <h2 class="categories-header_title">
+            Featured Categories
+          </h2>
+          <a href="#" class="categories-header_link">
+            Browse All Categories
+            <img src="assets/arrow-right.svg" alt="Browse Icon" class="browse-icon">
+          </a>
+        </div>
+
+        <div class="categories-card_list">
+          <div class="categories-card">
+            <div class="categories-card_info">
+              <div class="categories-card_icon-wrapper">
+                <img src="assets/buildings.svg" alt="Studio" class="categories-card_icon">
+              </div>
+              <div class="categories-card_text">
+                <h3 class="categories-card_title">Studio</h3>
+                <p class="categories-card_count">100+ listings</p>
+              </div>
+            </div>
+
+            <div class="categories-card_action">
+              <a href="#" class="categories-card_link">
+                View <span class="categories-card_arrow"><img src="assets/Send.svg" alt="Categories Arrow"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="categories-card">
+            <div class="categories-card_info">
+              <div class="categories-card_icon-wrapper">
+                <img src="assets/buliding.svg" alt="Studio" class="categories-card_icon">
+              </div>
+              <div class="categories-card_text">
+                <h3 class="categories-card_title">Apartment</h3>
+                <p class="categories-card_count">100+ listings</p>
+              </div>
+            </div>
+
+            <div class="categories-card_action">
+              <a href="#" class="categories-card_link">
+                View <span class="categories-card_arrow"><img src="assets/Send.svg" alt="Categories Arrow"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="categories-card">
+            <div class="categories-card_info">
+              <div class="categories-card_icon-wrapper">
+                <img src="assets/buildings-2.svg" alt="Studio" class="categories-card_icon">
+              </div>
+              <div class="categories-card_text">
+                <h3 class="categories-card_title">Office</h3>
+                <p class="categories-card_count">100+ listings</p>
+              </div>
+            </div>
+
+            <div class="categories-card_action">
+              <a href="#" class="categories-card_link">
+                View <span class="categories-card_arrow"><img src="assets/Send.svg" alt="Categories Arrow"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cities">
+      <div class="cities-container">
+        <div class="cities-header">
+          <h2 class="cities-header_title">
+            Explore Cities
+          </h2>
+          <a href="#" class="cities-header_link">
+            Browse All Cities
+            <img src="assets/arrow-right.svg" alt="Browse Icon" class="browse-icon">
+          </a>
+        </div>
+
+        <div class="cities-card_list">
+          <div class="cities-card">
+            <img src="assets/city1.png" alt="Oklahoma" class="cities-card_image">
+            <div class="cities-card_text">
+              <h5 class="cities-card_name">Pasadena, Oklahoma</h5>
+              
+              <div class="cities-card_count-wrapper">
+                <img src="assets/house.svg" alt="icon" class="cities-card_icon">
+                <span class="cities-card_count">100+ listings</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cities-card">
+            <img src="assets/city2.png" alt="California" class="cities-card_image">
+            <div class="cities-card_text">
+              <h5 class="cities-card_name">Lafayette, California</h5>
+              
+              <div class="cities-card_count-wrapper">
+                <img src="assets/house.svg" alt="icon" class="cities-card_icon">
+                <span class="cities-card_count">100+ listings</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cities-card">
+            <img src="assets/city3.png" alt="New York" class="cities-card_image">
+            <div class="cities-card_text">
+              <h5 class="cities-card_name">New York</h5>
+              
+              <div class="cities-card_count-wrapper">
+                <img src="assets/house.svg" alt="icon" class="cities-card_icon">
+                <span class="cities-card_count">100+ listings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="agents">
+      <div class="agents-container">
+        <div class="agents-header">
+          <h2 class="agents-header_title">
+            Meet Our Agents
+          </h2>
+          <a href="#" class="agents-header_link">
+            Browse All Agents
+            <img src="assets/arrow-right.svg" alt="Agents Icon Link" class="agents-link_icon">
+          </a>
+        </div>
+
+        <div class="agents-grid">
+          <div class="agents-card">
+            <div class="agents-info">
+              <h5 class="agents-name">Edwin Martins</h5>
+              <p class="agents-role">Property Advisor</p>
+              <div class="agents-socials">
+                <span><img src="assets/call.svg" alt="Agents Social"></span>
+                <span><img src="assets/instagram.svg" alt="Agents Social"></span>
+                <span><img src="assets/facebook.svg" alt="Agents Social"></span>
+                <span><img src="assets/twitter.svg" alt="Agents Social"></span>
+              </div>
+            </div>
+            <div class="agent-photo">
+              <img src="assets/agent-1.png" alt="Edwin">
+            </div>
+          </div>
+
+          <div class="agents-card">
+            <div class="agents-info">
+              <h5 class="agents-name">Robert Fox</h5>
+              <p class="agents-role">Property Advisor</p>
+              <div class="agents-socials">
+                <span><img src="assets/call.svg" alt="Agents Social"></span>
+                <span><img src="assets/instagram.svg" alt="Agents Social"></span>
+                <span><img src="assets/facebook.svg" alt="Agents Social"></span>
+                <span><img src="assets/twitter.svg" alt="Agents Social"></span>
+              </div>
+            </div>
+            <div class="agent-photo">
+              <img src="assets/agent-2.png" alt="Edwin">
+            </div>
+          </div>
+
+          <div class="agents-card">
+            <div class="agents-info">
+              <h5 class="agents-name">Jane Cooper</h5>
+              <p class="agents-role">Property Advisor</p>
+              <div class="agents-socials">
+                <span><img src="assets/call.svg" alt="Agents Social"></span>
+                <span><img src="assets/instagram.svg" alt="Agents Social"></span>
+                <span><img src="assets/facebook.svg" alt="Agents Social"></span>
+                <span><img src="assets/twitter.svg" alt="Agents Social"></span>
+              </div>
+            </div>
+            <div class="agent-photo">
+              <img src="assets/agent-3.png" alt="Edwin">
+            </div>
+          </div>
+
+          <div class="agents-card">
+            <div class="agents-info">
+              <h5 class="agents-name">Guy Hawkins</h5>
+              <p class="agents-role">Property Advisor</p>
+              <div class="agents-socials">
+                <span><img src="assets/call.svg" alt="Agents Social"></span>
+                <span><img src="assets/instagram.svg" alt="Agents Social"></span>
+                <span><img src="assets/facebook.svg" alt="Agents Social"></span>
+                <span><img src="assets/twitter.svg" alt="Agents Social"></span>
+              </div>
+            </div>
+            <div class="agent-photo">
+              <img src="assets/agent-4.png" alt="Edwin">
+            </div>
+          </div>
+
+          <div class="agents-card">
+            <div class="agents-info">
+              <h5 class="agents-name">Kathryn Murphy</h5>
+              <p class="agents-role">Property Advisor</p>
+              <div class="agents-socials">
+                <span><img src="assets/call.svg" alt="Agents Social"></span>
+                <span><img src="assets/instagram.svg" alt="Agents Social"></span>
+                <span><img src="assets/facebook.svg" alt="Agents Social"></span>
+                <span><img src="assets/twitter.svg" alt="Agents Social"></span>
+              </div>
+            </div>
+            <div class="agent-photo">
+              <img src="assets/agent-5.png" alt="Edwin">
+            </div>
+          </div>
+
+          <div class="agents-card">
+            <div class="agents-info">
+              <h5 class="agents-name">Albert Flores</h5>
+              <p class="agents-role">Property Advisor</p>
+              <div class="agents-socials">
+                <span><img src="assets/call.svg" alt="Agents Social"></span>
+                <span><img src="assets/instagram.svg" alt="Agents Social"></span>
+                <span><img src="assets/facebook.svg" alt="Agents Social"></span>
+                <span><img src="assets/twitter.svg" alt="Agents Social"></span>
+              </div>
+            </div>
+            <div class="agent-photo">
+              <img src="assets/agent-6.png" alt="Edwin">
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonials-wrapper">
+        <div class="testimonials-header">
+          <h2 class="testimonials-header_title">
+            Kind Words From Our Customers
+          </h2>
+        </div>
+
+        <div class="testimonnials-content">
+          <div class="testimonials-container_card">
+
+            <div class="testimonials-card">
+              <div class="stars">
+                <img src="assets/Star 1.svg" alt="star"> </div>
+              <p class="testimonial-text">"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."</p>
+              <div class="testimonial-footer">
+                <div class="user-info">
+                  <h4 class="user-name">Brooklyn Simmons</h4>
+                  <p class="user-role">CEO of Asana</p>
+                </div>
+                <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-btn_container">
+            <button>
+              <img src="assets/arrow-left.svg" alt="btn-icon">
+            </button>
+            <button>
+              <img src="assets/arrow-right.svg" alt="btn-icon">
+            </button>
+          </div>
         </div>
       </div>
     </section>

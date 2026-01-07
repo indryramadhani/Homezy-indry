@@ -27,7 +27,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 50;
     background: #FBFAFF;
     box-sizing: border-box;
 }
@@ -340,7 +340,7 @@ nav ul li a svg {
 .profile-card {
   position: absolute;
   top: 7%;
-  right: 2%;
+  right: 7%;
 
   width: 253px;
   background: #ffffff;
@@ -404,7 +404,6 @@ nav ul li a svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
 }
 
 .featured {
@@ -414,7 +413,6 @@ nav ul li a svg {
 }
 
 .featured-container {
-  max-width: 1200px; 
   margin: 0 auto;    
   width: 100%;
   box-sizing: border-box;
@@ -647,21 +645,78 @@ nav ul li a svg {
   margin-top: 20px;
 }
 
+/* Container Utama */
+.property-card {
+  display: flex;
+  justify-content: space-around; /* Membagi ruang antar item secara merata */
+  align-items: center;
+  background-color: #F7F2FF;    /* Warna background ungu muda sesuai gambar */
+  padding: 20px;           /* Padding atas-bawah dan kiri-kanan */
+  border-radius: 15px;  
+  gap: 48px;
+  /* Membuat sudut membulat halus */
+  font-family: "Hanken Grotesk", sans-serif; /* Menggunakan font clean modern */
+  max-width: 596px;             /* Lebar maksimal kartu */
+  margin: 20px auto;            /* Posisi tengah layar */
+}
+
+/* Tiap kolom (Label + Content) */
+.prop-item {
+  display: flex;
+  flex-direction: row;       /* Label berada di atas icon/value */
+  gap: 8px;                    /* Jarak antara label dan isi di bawahnya */
+}
+
+/* Teks Label (Bedrooms, Bathrooms, dll) */
+.label {
+  color: #686A79;               /* Warna abu-abu pudar */
+  font-size: 16px;
+  font-weight: 300;
+  white-space: nowrap;          /* Mencegah teks turun ke bawah jika sempit */
+}
+
+/* Container untuk Icon + Angka/Teks */
+.content {
+  display: flex;
+  align-items: center;          /* Menyejajarkan icon dan angka secara vertikal */
+  gap: 8px;                    /* Jarak antara icon dan angka */
+}
+
+/* Pengaturan Ikon SVG/Gambar */
+.icon img {
+  width: 24px;                  /* Ukuran ikon yang ideal */
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Teks Nilai (4, 6x8 m2, Modern Loft) */
+.value {
+  color: #191A23;               /* Warna hitam pekat */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;             /* Membuat teks menjadi tebal (bold) */
+  white-space: nowrap;
+}
+
 .featured-list-small {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  align-items: stretch; 
+  width: 100%;
+  max-width: 1162px; 
+  margin: 0 auto;
 }
 
 .card-small {
   background: #FFFFFF;
-  border: 2px solid #E7DCFF;
+  border: 1px solid #E7DCFF;
   border-radius: 15px;
   margin-left: 10px;
   max-height: 420px;
   display: flex;
   flex-direction: column;
+  overflow: visible;
   position: relative; 
 }
 
@@ -669,8 +724,7 @@ nav ul li a svg {
   position: absolute; 
   top: 174px;          
   left: -8px;         
-  z-index: 10;       
-  display: flex;      
+  z-index: 10;           
 }
 
 .badge img {
@@ -695,17 +749,626 @@ nav ul li a svg {
   border-top-right-radius: 15px;
 }
 
+/* Container Utama */
 .card-small_content {
-  padding: 24px;
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 20px;
+  max-width: 366px;
+  gap: 16px;
+}
+
+/* Harga */
+.card-small_price {
+  font-family: "Syne", sans-serif;
+  display: block;
+  font-size: 32px;
+  font-weight: 600;
+  color: #191A23;
+  line-height: 40px;
+  letter-spacing: -4%;
+  margin-bottom: 8px;
+}
+
+/* Judul Properti */
+.card-small_title {
+  font-family: "Syne", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #191A23;
+  letter-spacing: -4%;
+  margin: 0 0 12px 0;
+}
+
+/* Lokasi */
+.card-small_location {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #686A79;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Garis Pemisah Abu-abu */
+.divider {
+  border: 0;
+  border-top: 1px solid #F7F2FF;
+  margin-bottom: 16px;
+}
+
+/* Container Ikon (Flexbox) */
+.small-property_card {
+  display: flex;
+  gap: 20px; /* Jarak antar item (Bed, Bath, Area) */
+  align-items: center;
+}
+
+/* Tiap Item Properti */
+.prop-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Jarak antara gambar ikon dan teks */
+}
+
+.prop-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.prop-item span {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #686A79;
+  font-weight: 500;
+}
+
+.benefits {
+  padding: 80px 10%; 
+  width: 100%;
+  box-sizing: border-box;
+  gap: 8px;
+}
+
+.benefits-container { 
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+
+.benefits-header {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.benefits-header_title {
+  max-width: 450px;
+  font-family: "Syne", sans-serif;
+  font-size: 48px; 
+  font-weight: 600;
+  color: #191A23; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.04em; 
+  text-align: left;
+  flex: 1;
+}
+
+.benefits-header_description {
+  max-width: 450px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #686A79;
+  margin: 0;
+  line-height: 28px;
+  text-align: left;
+}
+
+.benefits-card_list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.benefits-card {
+  background: #FFFFFF;
+  border: 1px solid #191A23; 
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 362px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.benefits-icon_wrapper {
+  width: 90px;
+  height: 90px;
+  background-color: #E7DCFF;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.benefits-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex-grow: 1; 
 }
 
-.card-small_price {
-  font-weight: bold;
-  font-size: 1.2rem;
+.benefits-title {
+  font-family: "Syne", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #191A23;
+  margin: 0;
+  line-height: 32px;
+  letter-spacing: -4%;
+}
+
+.benefits-text {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #686A79;
+  margin: 0;
+  line-height: 26px;
+}
+
+.categories {
+  padding: 80px 10%; 
+  width: 100%;
+  box-sizing: border-box;
+  gap: 8px;
+}
+
+.categories-container { 
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+
+.categories-header {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.categories-header_title {
+  font-family: "Syne", sans-serif;
+  font-size: 48px; 
+  font-weight: 600;
+  color: #191A23; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.04em; 
+}
+
+.categories-header_link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #191A23;                
+  text-decoration: none;        
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  gap: 8px;                    
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.categories-header_link:hover {
+  opacity: 0.7;                  
+  transform: translateX(4px);    
+}
+
+.browse-icon {
+  display: block;
+}
+
+.categories-card_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categories-card {
+  background: #FFFFFF;
+  border: 1px solid #E7DCFF; 
+  border-radius: 15px;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.categories-card_info {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.categories-card_icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #E7DCFF;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  flex-shrink: 0;
+} 
+
+img.categories-card_icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.categories-card_text {
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-card_title {
+  font-family: "Syne", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #191A23;
+  margin: 0;
+  line-height: 32px;
+  letter-spacing: -4%;
+}
+
+.categories-card_count {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #686A79;
+  margin: 0;
+  line-height: 28px;
+}
+
+.categories-card_action {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+a.categories-card_link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #191A23;                
+  text-decoration: none;        
+  display: flex;
+  flex-direction: row;
+  line-height: 140%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+a.categories-card_link:hover {
+  opacity: 0.7;                  
+  transform: translateY(-4px);    
+}
+
+.categories-card_arrow {
+  display: block;
+  margin-left: 8px;
+}
+
+.cities {
+  padding: 80px 10%; 
+  width: 100%;
+  box-sizing: border-box;
+  gap: 8px;
+}
+
+.cities-container { 
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+
+.cities-header {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cities-header_title {
+  font-family: "Syne", sans-serif;
+  font-size: 48px; 
+  font-weight: 600;
+  color: #191A23; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.04em; 
+}
+
+.cities-header_link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #191A23;                
+  text-decoration: none;        
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  gap: 8px;                    
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cities-header_link:hover {
+  opacity: 0.7;                  
+  transform: translateX(4px);    
+}
+
+.cities-card_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cities-card {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 100%;
+  flex: 1 1 300px;
+  max-width: 366px;
+  border-radius: 15px;
+  border: 1px solid #E7DCFF;
+  overflow: hidden;
+}
+
+img.cities-card_image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cities-card_text {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;               
+  padding: 24px;          
+  align-items: flex-start;
+}
+
+.cities-card_name {
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -4%;
+  color: #191A23;
+  margin: 0;
+}
+
+.cities-card_count-wrapper {
+  display: flex;
+  flex-direction: row;     
+  align-items: center;  
+  gap: 8px;
+}
+
+.cities-card_icon {
+  width: 24px;
+  height: 24px;
+}
+
+.cities-card_count {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: #686A79;
+}
+
+.agents {
+  padding: 80px 10%; 
+  width: 100%;
+  box-sizing: border-box;
+  gap: 8px;
+}
+
+.agents-container {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+
+.agents-header {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.agents-header_title {
+  font-family: "Syne", sans-serif;
+  font-size: 48px; 
+  font-weight: 600;
+  color: #191A23; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.agents-header_link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #191A23;                
+  text-decoration: none;        
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  gap: 8px;                    
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.agents-header_link:hover {
+  opacity: 0.7;                  
+  transform: translateX(4px);   
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+.agents-card {
+  background: #FFFFFF;
+  border: 1px solid #E7DCFF;
+  border-radius: 15px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agents-info {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;             
+  flex: 1;
+  min-width: 0;
+  gap: 4px;          
+  height: auto;           
+  flex-shrink: 0;         
+}
+
+.agents-name {
+  font-family: "Syne", sans-serif;
+  color: #191A23;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.agents-role {
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #686A79;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.agents-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.agents-socials span {
+  width: 32px;
+  height: 32px;
+  background: #191A23;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agents-socials span img {
+  width: 16px; 
+  height: 16px;
+  object-fit: contain;
+}
+
+.agent-photo img {
+  width: 108px;
+  height: 108px;
+  border-radius: 15px;
+  background-color: #FFE1F2;
+  object-fit: cover;
+}
+
+.testimonials {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 8px;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 64px;              
+  padding: 80px 0;        
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.testimonials-header_title {
+  font-family: "Syne", sans-serif;
+  font-size: 48px; 
+  font-weight: 600;
+  color: #191A23; 
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.04em; 
+}
+
+/* .testimonials-content {
+ */
 }
 
 @media (max-width: 768px) {
