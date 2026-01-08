@@ -45,17 +45,25 @@
 
     <!-- Font Awesome -->
      <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Swiper -->
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
   </head>
+
 
   <body>
     <header>
@@ -70,22 +78,30 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Properties</a></li>
           <li><a href="#">Agents</a></li>
-          <li>
-            <a href="#"
-              >Pages
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="#191A23"
-              >
-                <path
-                  d="M12 16.7996C11.3 16.7996 10.6 16.5296 10.07 15.9996L3.55002 9.47965C3.26002 9.18965 3.26002 8.70965 3.55002 8.41965C3.84002 8.12965 4.32002 8.12965 4.61002 8.41965L11.13 14.9396C11.61 15.4196 12.39 15.4196 12.87 14.9396L19.39 8.41965C19.68 8.12965 20.16 8.12965 20.45 8.41965C20.74 8.70965 20.74 9.18965 20.45 9.47965L13.93 15.9996C13.4 16.5296 12.7 16.7996 12 16.7996Z"
-                  style="fill: var(--fillg)"
-                />
-              </svg>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">
+              Pages
+              <img src="assets/arrow-down.svg" alt="Dropdown Icon" class="arrow-icon">
             </a>
+            <div class="dropdown-content">
+              <div class="dropdown-grid">
+                <a href="#">Home V1</a>
+                <a href="#">Home V2</a>
+                <a href="#">Search Properties V1</a>
+                <a href="#">Search Properties V2</a>
+                <a href="#">Property Details V1</a>
+                <a href="#">Property Details V2</a>
+                <a href="#">Agent List V1</a>
+                <a href="#">Agent List V2</a>
+                <a href="#">Agent Details V1</a>
+                <a href="#">Agent Details V2</a>
+                <a href="#">About Us V1</a>
+                <a href="#">About Us V2</a>
+                <a href="#">Contact Us V1</a>
+                <a href="#">Contact Us V2</a>
+                <a href="#">FAQ</a>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
@@ -126,8 +142,8 @@
               </svg>
             </div>
             <div class="search-info">
-              <span class="search-label">Location</span>
-              <span class="search-value">California, US</span>
+              <p class="search-label">Location</p>
+              <p class="search-value">California, US</p>
             </div>
           </div>
 
@@ -163,8 +179,8 @@
               </svg>
             </div>
             <div class="search-info">
-              <span class="search-label">Price</span>
-              <span class="search-value">$1500-$2500</span>
+              <p class="search-label">Price</p>
+              <p class="search-value">$1500-$2500</p>
             </div>
           </div>
 
@@ -219,8 +235,8 @@
               </svg>
             </div>
             <div class="search-info">
-              <span class="search-label">Type of Property</span>
-              <span class="search-value">Apartment</span>
+              <p class="search-label">Type of Property</p>
+              <p class="search-value">Apartment</p>
             </div>
           </div>
 
@@ -289,8 +305,11 @@
               <div class="large-top_content">
                 <div class="large-price_name">
                   <div class="large-price">
-                    <span class="large-price_value">$2,095</span>
-                    <span class="large-price_duration">/month</span>
+                    <p class="large-price_value">
+                      $2,095
+                      <span class="large-price_duration">/month</span>
+                    </p>
+                    
                   </div>
 
                   <div class="large-agent">
@@ -317,19 +336,19 @@
               <div class="large-info">
                 <h3 class="large-title">COVA Home Realty</h3>
                 <div class="large-location_container">
-  <div class="loaction-item">
-    <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M12 13.43C13.7231 13.43 15.12 12.0331 15.12 10.31C15.12 8.58687 13.7231 7.19 12 7.19C10.2769 7.19 8.88 8.58687 8.88 10.31C8.88 12.0331 10.2769 13.43 12 13.43Z" stroke="#686A79" stroke-width="1.5" />
-      <path d="M3.62001 8.49C5.59001 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.39001 20.54C5.63001 17.88 2.47001 13.57 3.62001 8.49Z" stroke="#686A79" stroke-width="1.5" />
-    </svg>
-    <p class="large-location">2699 Green Valley, Highland Lake, FL</p>
-  </div>
+                  <div class="loaction-item">
+                    <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 13.43C13.7231 13.43 15.12 12.0331 15.12 10.31C15.12 8.58687 13.7231 7.19 12 7.19C10.2769 7.19 8.88 8.58687 8.88 10.31C8.88 12.0331 10.2769 13.43 12 13.43Z" stroke="#686A79" stroke-width="1.5" />
+                      <path d="M3.62001 8.49C5.59001 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.39001 20.54C5.63001 17.88 2.47001 13.57 3.62001 8.49Z" stroke="#686A79" stroke-width="1.5" />
+                    </svg>
+                    <p class="large-location">2699 Green Valley, Highland Lake, FL</p>
+                  </div>
 
-  <p class="large-desc">
-    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-    <a href="#" class="large-link">Read More</a>
-  </p>
-</div>
+                <p class="large-desc">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                  <a href="#" class="large-link">Read More</a>
+                </p>
+              </div>
 
               <div class="property-card">
                 <div class="property-item">
@@ -762,33 +781,244 @@
           </h2>
         </div>
 
-        <div class="testimonnials-content">
-          <div class="testimonials-container_card">
+        <div class="testimonials-container">
+          <div class="testimonials-content">
 
-            <div class="testimonials-card">
-              <div class="stars">
-                <img src="assets/Star 1.svg" alt="star"> </div>
-              <p class="testimonial-text">"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."</p>
-              <div class="testimonial-footer">
-                <div class="user-info">
-                  <h4 class="user-name">Brooklyn Simmons</h4>
-                  <p class="user-role">CEO of Asana</p>
+            <swiper-container
+            class="testimonialSwiper" init="false"
+            >
+              <!-- Slide 1 -->
+              <swiper-slide>
+                <div class="testimonials-card">
+                  <div class="stars">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                  </div>
+                  <p class="testimonial-text">
+                    "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+                  </p>
+                  <div class="testimonial-footer">
+                    <div class="user-info">
+                      <h5 class="user-name">Brooklyn Simmons</h5>
+                      <p class="user-role">CEO of Asana</p>
+                    </div>
+                    <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
+                  </div>
                 </div>
-                <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
-              </div>
-            </div>
+              </swiper-slide>
+
+              <!-- Slide 2 -->
+              <swiper-slide>
+                <div class="testimonials-card">
+                  <div class="stars">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                  </div>
+                  <p class="testimonial-text">
+                    "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+                  </p>
+                  <div class="testimonial-footer">
+                    <div class="user-info">
+                      <h5 class="user-name">Brooklyn Simmons</h5>
+                      <p class="user-role">CEO of Asana</p>
+                    </div>
+                    <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
+                  </div>
+                </div>
+              </swiper-slide>
+
+              <!-- Slide 3 -->
+              <swiper-slide>
+                <div class="testimonials-card">
+                  <div class="stars">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                  </div>
+                  <p class="testimonial-text">
+                    "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+                  </p>
+                  <div class="testimonial-footer">
+                    <div class="user-info">
+                      <h5 class="user-name">Brooklyn Simmons</h5>
+                      <p class="user-role">CEO of Asana</p>
+                    </div>
+                    <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
+                  </div>
+                </div>
+              </swiper-slide>
+
+              <swiper-slide>
+                <div class="testimonials-card">
+                  <div class="stars">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                  </div>
+                  <p class="testimonial-text">
+                    "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+                  </p>
+                  <div class="testimonial-footer">
+                    <div class="user-info">
+                      <h5 class="user-name">Brooklyn Simmons</h5>
+                      <p class="user-role">CEO of Asana</p>
+                    </div>
+                    <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
+                  </div>
+                </div>
+              </swiper-slide>
+
+              <swiper-slide>
+                <div class="testimonials-card">
+                  <div class="stars">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                    <img src="assets/Star 1.svg" alt="star">
+                  </div>
+                  <p class="testimonial-text">
+                    "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."
+                  </p>
+                  <div class="testimonial-footer">
+                    <div class="user-info">
+                      <h5 class="user-name">Brooklyn Simmons</h5>
+                      <p class="user-role">CEO of Asana</p>
+                    </div>
+                    <img src="assets/testimonial-footer-logo.svg" alt="Asana" class="company-logo">
+                  </div>
+                </div>
+              </swiper-slide>
+
+              
+            </swiper-container>
+          
+                <div class="testimonial-btn_container">
+                  <button class="arrow-left">
+                    <img src="assets/arrow-left.svg" alt="btn-icon">
+                  </button>
+                  <button class="arrow-right">
+                    <img src="assets/arrow-right.svg" alt="btn-icon">
+                  </button>
+                </div>
+              
+
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-card">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2 class="cta-title">
+              Subscribe To Our Newsletter
+            </h2>
+            <p class="cta-description">
+              Join our newsletter to stay up to date on features and releases.
+            </p>
           </div>
 
-          <div class="testimonial-btn_container">
-            <button>
-              <img src="assets/arrow-left.svg" alt="btn-icon">
-            </button>
-            <button>
-              <img src="assets/arrow-right.svg" alt="btn-icon">
-            </button>
+            <form class="cta-newsletter_form">
+              <input 
+                type="email" 
+                placeholder="Enter Your Email Address" 
+                class="newsletter-input" 
+                required
+              >
+              <button type="submit" class="newsletter-btn">
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-content">
+
+          <div class="footer-brand">
+            <div class="footer-logo_container">
+              <a href="#">
+                <img src="assets/Logo.svg" alt="Footer Logo" class="footer-logo">
+              <span class="footer-logo_text">
+                Homezy
+              </span>
+              </a>
+              
+            </div>
+            <p class="footer-description">
+              We are creative people who provide the best way to you who want to have a new confortable and suitable place to live
+            </p>
+            <div class="footer-socials">
+              <span><img src="assets/call.svg" alt="Profile Social"></span>
+              <span><img src="assets/instagram.svg" alt="Profile Social"></span>
+              <span><img src="assets/facebook.svg" alt="Profile Social"></span>
+              <span><img src="assets/twitter.svg" alt="Profile Social"></span>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <p class="footer-label">Pages</p>
+              <div class="grid-container">
+                <a href="#">Home V1</a>
+                <a href="#">Home V2</a>
+                <a href="#">Search Properties V1</a>
+                <a href="#">Search Properties V2</a>
+                <a href="#">Property Details V1</a>
+                <a href="#">Property Details V2</a>
+                <a href="#">Agent List V1</a>
+                <a href="#">Agent List V2</a>
+                
+                <a href="#">Agent Details V1</a>
+                <a href="#">Agent Details V2</a>
+                <a href="#">About Us V1</a>
+                <a href="#">About Us V2</a>
+                <a href="#">Contact Us V1</a>
+                <a href="#">Contact Us V2</a>
+                <a href="#">FAQ</a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <h3 class="footer-label">Utility Pages</h3>
+              <div class="list-vertical">
+                <a href="#">Sign In</a>
+                <a href="#">Sign Up</a>
+                <a href="#">Forgot Password</a>
+                <a href="#">Reset Password</a>
+                <a href="#">404 Error Page</a>
+                <a href="#">Style Guides</a>
+                <a href="#">Licenses</a>
+                <a href="#">Change Log</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <hr class="footer-divider">
+                <p class="copyright-text">
+                  ©2023 Estately. All rights reserved
+                </p>
+              </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

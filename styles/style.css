@@ -98,6 +98,68 @@ nav ul li a svg {
     flex-shrink: 0;
 }
 
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropbtn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #191A23;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.arrow-icon {
+  width: 12px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 24px; 
+  box-shadow: 24px 28px 92px 0px rgba(54, 17, 102, 0.12);
+  z-index: 999;
+  margin-top: 15px; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 220px); 
+  gap: 16px 24px;
+}
+
+.dropdown-grid a {
+  text-decoration: none;
+  color: #191A23;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 500; 
+  line-height: 26px;
+  transition: color 0.2s ease;
+}
+
+.dropdown-grid a:hover {
+  color: #C1A5FF; 
+}
+
 .contact-btn {
     padding: 16px 32px;
     background-color: transparent;
@@ -139,7 +201,6 @@ nav ul li a svg {
   background-size: 50%;
   background-repeat: no-repeat;
 
-  opacity: 0.3;
   pointer-events: none;
   z-index: 0;
 }
@@ -149,10 +210,8 @@ nav ul li a svg {
   flex: 1;
   flex-direction: column;
   gap: 32px;
-
   max-width: 763px; 
   width: 100%;
-
   position: relative;
   z-index: 2;
 }
@@ -165,7 +224,7 @@ nav ul li a svg {
 }
 
 .hero-text h1 {
-    font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
   font-size: 72px;
   color: #191A23;
   line-height: 88px;
@@ -1332,7 +1391,7 @@ img.cities-card_image {
 
 .testimonials {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   width: 100%;
   box-sizing: border-box;
   gap: 8px;
@@ -1367,9 +1426,432 @@ img.cities-card_image {
   letter-spacing: -0.04em; 
 }
 
-/* .testimonials-content {
- */
+.testimonials-container {
+  max-width: 1440px; 
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 140px 32px 140px;
+  box-sizing: border-box;
+  position: relative;
 }
+
+.testimonials-content {
+  width: 100%;
+}
+
+.testimonialSwiper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0;
+  overflow: hidden;
+  gap: 24px; 
+  justify-content: flex-start;
+  align-items: stretch;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+swiper-slide {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-card {
+  background: #FFFFFF;
+  border: 2px solid #F7F2FF; 
+  border-radius: 15px;
+  padding: 32px;
+  gap: 32px;
+
+  width: 100%;
+  min-width: 335px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.stars img {
+  width: 20px;
+  height: 20px;
+}
+
+.testimonial-text {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #686A79;
+  min-width: 271px;
+}
+
+.testimonial-footer {
+  min-width: 271px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.user-name {
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -4%;
+  color: #191A23;
+  margin: 0;
+}
+
+.user-role {
+  font-family: "Hanken Grotesk";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #191A23;
+  margin: 0;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.testimonial-btn_container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.testimonial-btn_container button:disabled {
+  opacity: 0.5;
+}
+
+.arrow-left {
+  cursor: pointer;
+  background-color: #191A23;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.arrow-right {
+  cursor: pointer;
+  background-color: #191A23;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.arrow_right_icon {
+  color: #FFFFFF;
+}
+
+.cta {
+  padding: 80px 140px 0 140px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cta-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%; /* Mengambil setengah lebar kartu sebelah kanan */
+  
+  background-image: url("../assets/cta-pattern.svg"); 
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  z-index: 1; /* Pastikan di atas background kartu */
+}
+
+.cta-card {
+    background-color: #C1A5FF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: left;
+    padding: 56px 72px;
+    border-radius: 15px;
+    border: 2px solid #191A23 ;
+}
+
+.cta-content {
+  max-width: 416px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cta-title {
+  max-width: 380px;
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -4%;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.cta-description {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: #E7DCFF;
+}
+
+.cta-newsletter_form {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 8px; 
+  border-radius: 14px; 
+  border: 1px solid #D6D7E0;
+  width: 100%;
+}
+
+.newsletter-input {
+  flex: 1;
+  background: transparent; 
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #191A23;
+}
+
+.newsletter-input::placeholder {
+  color: #B7B8C1; 
+}
+
+.newsletter-btn {
+  background-color: #191A23; 
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: transparent;
+  border: 1px solid #191A23;
+  color: #191A23;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  padding: 64px 140px 32px 140px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 80px;                  
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.footer-brand {
+  max-width: 358px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-logo_container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo_container a {
+  display: flex;           
+  align-items: center;     
+  gap: 8px;   
+  text-decoration: none;            
+}
+
+.footer-logo {
+    width: 2.5rem;
+    height: auto;
+}
+
+.footer-logo_text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #191A23;
+    font-family: "Syne", sans-serif;
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer-description {
+  font-family: "Hanken Grotesk";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.footer-socials span {
+    width: 40px;
+    height: 40px;
+    background-color: #191A23; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer-socials span img {
+    width: 15px;
+    height: auto;
+}
+
+.footer-socials span:hover {
+    opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 104px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-label {
+  font-family: "Hanken Grotesk";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #686A79;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 152px); 
+  grid-auto-flow: column;
+  grid-template-rows: repeat(8, auto);
+  gap: 16px 80px; 
+}
+
+.grid-container a {
+  text-decoration: none;
+  font-family: "Hanken Grotesk";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #191A23; 
+  transition: color 0.3s ease;
+}
+
+.grid-container a:hover {
+  color: #C1A5FF;
+}
+
+.list-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.list-vertical a {
+  font-family: "Hanken Grotesk", sans-serif;
+  text-decoration: none; 
+  font-weight: 500; 
+  font-size: 16px;
+  line-height: 20px;
+  color: #191A23; 
+  transition: color 0.3s ease;
+}
+
+.list-vertical a:hover {
+  color: #C1A5FF; 
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #D6D7E0;
+  margin-bottom: 32px;
+}
+
+.copyright-text {
+  font-family: "Hanken Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #868893;
+}
+
 
 @media (max-width: 768px) {
   .featured-card_large {
