@@ -67,46 +67,53 @@
 
   <body>
     <header>
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="assets/Logo.svg" alt="Homezy Logo" class="logo-img" />
-          <span class="logo-text"> Homezy </span>
-        </a>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="assets/Logo.svg" alt="Homezy Logo" class="logo-img" />
+        <span class="logo-text"> Homezy </span>
+      </a>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav id="nav-menu">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <img src="assets/Logo.svg" alt="Homezy Logo" />
+          <span class="logo-text">Homezy</span>
+        </div>
+        <div class="close-menu" id="close-menu">&times;</div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Properties</a></li>
-          <li><a href="#">Agents</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">
-              Pages
-              <img src="assets/arrow-down.svg" alt="Dropdown Icon" class="arrow-icon">
-            </a>
-            <div class="dropdown-content">
-              <div class="dropdown-grid">
-                <a href="#">Home V1</a>
-                <a href="#">Home V2</a>
-                <a href="#">Search Properties V1</a>
-                <a href="#">Search Properties V2</a>
-                <a href="#">Property Details V1</a>
-                <a href="#">Property Details V2</a>
-                <a href="#">Agent List V1</a>
-                <a href="#">Agent List V2</a>
-                <a href="#">Agent Details V1</a>
-                <a href="#">Agent Details V2</a>
-                <a href="#">About Us V1</a>
-                <a href="#">About Us V2</a>
-                <a href="#">Contact Us V1</a>
-                <a href="#">Contact Us V2</a>
-                <a href="#">FAQ</a>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Properties</a></li>
+        <li><a href="#">Agents</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">
+            Pages
+            <img src="assets/arrow-down.svg" alt="Dropdown Icon" class="arrow-icon">
+          </a>
+          <div class="dropdown-content">
+            <div class="dropdown-grid">
+              <a href="#">Home V1</a>
+              <a href="#">Home V2</a>
               </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <a href="#" class="contact-btn">Contact Us</a>
-    </header>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <a href="#" class="contact-btn-sidebar">Contact Us</a>
+      </div>
+    </nav>
+
+  <a href="#" class="contact-btn">Contact Us</a>
+</header>
 
     <section id="hero" class="hero">
       <div class="hero-left-content">
@@ -286,7 +293,8 @@
         <!-- HEADER -->
         <div class="featured-header">
           <h2 class="featured-title">Featured Listings</h2>
-          <a href="#" class="featured_link-all"> Browse All Featured &rarr; </a>
+          <a href="#" class="featured_link-all"> Browse All Featured 
+            <img src="assets/arrow-right-2.svg" alt="Arrow Right" class="browse-icon"> </a>
         </div>
 
         <!-- GRID -->
@@ -352,7 +360,7 @@
 
               <div class="property-card">
                 <div class="property-item">
-                  <span class="label">Bedrooms</span>
+                  <span class="label">3 Bedrooms</span>
                   <div class="content">
                     <span class="icon"><img src="assets/bed.svg" alt="Property Icon"></span>
                     <span class="value">4</span>
@@ -486,57 +494,55 @@
       </div>
     </section>
 
-    <section class="benefits">
-      <div class="benefits-container">
-        <div class="benefits-header">
-          <h2 class="benefits-header_title">Comfort Is Our Top Priority For You</h2>
-          <p class="benefits-header_description">We guarantee that the products we sell will make our customers happy because we are very concerned about our consumer satisfaction</p>
+   <section class="benefits">
+  <div class="benefits-container">
+    <div class="benefits-header">
+      <h2 class="benefits-header_title">Comfort Is Our Top Priority For You</h2>
+      <p class="benefits-header_description">We guarantee that the products we sell will make our customers happy because we are very concerned about our consumer satisfaction</p>
+    </div>
+
+    <!-- INI CONTAINER SWIPER -->
+    <div class="benefits-card_list swiper">
+      <!-- INI WRAPPER SWIPER -->
+      <div class="swiper-wrapper">
+        <div class="benefits-card swiper-slide">
+          <div class="benefits-icon_wrapper">
+            <img src="assets/coin.svg" alt="Support Icon">
+          </div>
+          <div class="benefits-content">
+            <h5 class="benefits-title">Affordable Price</h5>
+            <p class="benefits-text">We provide the best for you. The price we offer accordance with the quality we provide</p>
+          </div>
         </div>
-        <div class="benefits-card_list">
-          <div class="benefits-card">
-            <div class="benefits-icon_wrapper">
-              <img src="assets/coin.svg" alt="Support Icon">
-            </div>
-            <div class="benefits-content">
-              <h5 class="benefits-title">
-                Affordable Price
-              </h5>
-              <p class="benefits-text">
-                We provide the best for you. The price we offer accordance with the quality we provide
-              </p>
-            </div>
-          </div>
 
-          <div class="benefits-card">
-            <div class="benefits-icon_wrapper">
-              <img src="assets/like-shapes.svg" alt="Support Icon">
-            </div>
-            <div class="benefits-content">
-              <h5 class="benefits-title">
-                Clear Legality
-              </h5>
-              <p class="benefits-text">
-                Put your trust in us. We are a legal entity with official legality in the relevant government
-              </p>
-            </div>
+        <div class="benefits-card swiper-slide">
+          <div class="benefits-icon_wrapper">
+            <img src="assets/like-shapes.svg" alt="Support Icon">
           </div>
+          <div class="benefits-content">
+            <h5 class="benefits-title">Clear Legality</h5>
+            <p class="benefits-text">Put your trust in us. We are a legal entity with official legality in the relevant government</p>
+          </div>
+        </div>
 
-          <div class="benefits-card">
-            <div class="benefits-icon_wrapper">
-              <img src="assets/people.svg" alt="Support Icon">
-            </div>
-            <div class="benefits-content">
-              <h5 class="benefits-title">
-                Experienced Agent
-              </h5>
-              <p class="benefits-text">
-                We always work wih agents in their fields so that we can provide the best quality
-              </p>
-            </div>
+        <div class="benefits-card swiper-slide">
+          <div class="benefits-icon_wrapper">
+            <img src="assets/people.svg" alt="Support Icon">
+          </div>
+          <div class="benefits-content">
+            <h5 class="benefits-title">Experienced Agent</h5>
+            <p class="benefits-text">We always work wih agents in their fields so that we can provide the best quality</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="benefits-navigation">
+      <div class="swiper-button-prev-custom"><img src="assets/arrow-left.svg" alt="Prev"></div>
+      <div class="swiper-button-next-custom"><img src="assets/arrow-right.svg" alt="Next"></div>
+    </div>
+  </div>
+</section>
 
     <section class="categories">
       <div class="categories-container">
@@ -546,7 +552,7 @@
           </h2>
           <a href="#" class="categories-header_link">
             Browse All Categories
-            <img src="assets/arrow-right.svg" alt="Browse Icon" class="browse-icon">
+            <img src="assets/arrow-right-2.svg" alt="Browse Icon" class="browse-icon">
           </a>
         </div>
 
@@ -616,7 +622,7 @@
           </h2>
           <a href="#" class="cities-header_link">
             Browse All Cities
-            <img src="assets/arrow-right.svg" alt="Browse Icon" class="browse-icon">
+            <img src="assets/arrow-right-2.svg" alt="Browse Icon" class="browse-icon">
           </a>
         </div>
 
@@ -668,7 +674,7 @@
           </h2>
           <a href="#" class="agents-header_link">
             Browse All Agents
-            <img src="assets/arrow-right.svg" alt="Agents Icon Link" class="agents-link_icon">
+            <img src="assets/arrow-right-2.svg" alt="Agents Icon Link" class="agents-link_icon">
           </a>
         </div>
 
@@ -773,7 +779,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
+        <section class="testimonials">
       <div class="testimonials-wrapper">
         <div class="testimonials-header">
           <h2 class="testimonials-header_title">
@@ -1017,8 +1023,9 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
   </body>
 </html>

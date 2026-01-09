@@ -16,6 +16,7 @@
 body {
     font-family: "Hanken Grotesk", sans-serif;
     background: #FBFAFF;
+    overflow-x: hidden;
 }
 
 header {
@@ -179,6 +180,7 @@ nav ul li a svg {
     transition: all 0.3s ease;
 }
 
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -187,7 +189,7 @@ nav ul li a svg {
     align-items: center;
     justify-content: space-between;
     padding: 80px 10%; 
-    gap: 48px;
+    gap: 8px;
     min-height: 100vh; 
 }
 
@@ -209,6 +211,7 @@ nav ul li a svg {
   display: flex;
   flex: 1;
   flex-direction: column;
+  flex-grow: 0;
   gap: 32px;
   max-width: 763px; 
   width: 100%;
@@ -230,6 +233,7 @@ nav ul li a svg {
   line-height: 88px;
   letter-spacing: -4%;
   width: auto;
+  max-width: 608px;
   font-weight: 600;
   margin: 0;
 }
@@ -319,16 +323,18 @@ nav ul li a svg {
 
 .hero-right-content {
   position: relative;
+  margin: 0;
   width: 514px; 
   height: 528px; 
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 40%;
   z-index: 1;
 }
 
 .top-house_wrapper {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 248px;
+  max-width: 238px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -375,12 +381,13 @@ nav ul li a svg {
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 14px;
   line-height: 1.4;
+  text-align: center;
 }
 
 .bottom-house {
   position: absolute;
   overflow: hidden;
-  width: 248px;
+  max-width: 238px;
   height: 340px;
   bottom: 0;
   right: 0;
@@ -533,7 +540,6 @@ nav ul li a svg {
 
 .featured-image_large {
   position: relative;
-
 }
 
 .featured-image_large img {
@@ -627,8 +633,8 @@ nav ul li a svg {
 }
 
 .agent-img {
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   border-radius: 39px;
   object-fit: cover;
   background-color: #CFB9FD;
@@ -884,7 +890,6 @@ nav ul li a svg {
   padding: 80px 10%; 
   width: 100%;
   box-sizing: border-box;
-  gap: 8px;
 }
 
 .benefits-container { 
@@ -929,22 +934,32 @@ nav ul li a svg {
   text-align: left;
 }
 
-.benefits-card_list {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
+/* Container Swiper */
+.benefits-card_list.swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0; /* HAPUS padding di sini karena sudah ada di .benefits */
 }
 
-.benefits-card {
+/* Swiper wrapper - parent dari slides */
+.swiper-wrapper {
+  display: flex;
+  gap: 32px;
+  transition-timing-function: ease-out;
+}
+
+/* Individual card/slide */
+.benefits-card.swiper-slide {
   background: #FFFFFF;
   border: 1px solid #191A23; 
   border-radius: 15px;
   padding: 40px;
-  width: 100%;
-  max-width: 362px;
+  width: 362px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 64px;
+  box-sizing: border-box;
 }
 
 .benefits-icon_wrapper {
@@ -955,7 +970,6 @@ nav ul li a svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left;
 }
 
 .benefits-content {
@@ -981,6 +995,37 @@ nav ul li a svg {
   color: #686A79;
   margin: 0;
   line-height: 26px;
+}
+
+/* Navigation buttons - hidden di desktop */
+.benefits-navigation {
+  display: none;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  cursor: pointer;
+  background-color: #191A23;
+  border-radius: 15px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev-custom:hover {
+  opacity: 0.7;
+  transform: translateX(-5px);
+}
+
+.swiper-button-next-custom:hover {
+  opacity: 0.7;
+  transform: translateX(5px);
 }
 
 .categories {
@@ -1038,6 +1083,8 @@ nav ul li a svg {
 
 .browse-icon {
   display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .categories-card_list {
@@ -1549,6 +1596,14 @@ swiper-slide {
   background-color: #191A23;
   border-radius: 15px;
   padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.arrow-left:hover {
+  background-color: #191A23;
+  opacity: 0.5;
+  border: 1px solid #191A23;
+  transform: translateX(-5px);
 }
 
 .arrow-right {
@@ -1556,6 +1611,14 @@ swiper-slide {
   background-color: #191A23;
   border-radius: 15px;
   padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.arrow-right:hover {
+  background-color: #191A23;
+  opacity: 0.5;
+  border: 1px solid #191A23;
+  transform: translateX(5px);
 }
 
 .arrow_right_icon {
@@ -1850,6 +1913,440 @@ footer {
   font-weight: 400;
   line-height: 160%;
   color: #868893;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 992px) {
+    /* 1. Sembunyikan elemen desktop yang tidak perlu */
+    header {
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%
+}
+
+    /* Munculkan Hamburger */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .menu-toggle .bar {
+        width: 28px;
+        height: 2px;
+        background: #191A23;
+        border-radius: 2px;
+    }
+
+    /* Sembunyikan Tombol Contact Desktop */
+    header .contact-btn {
+        display: none;
+    }
+
+    /* Sidebar Sidebar Styling */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan */
+        width: 85%;
+        max-width: 375px;
+        height: 100vh;
+        background: #F8F7FF; /* Warna sesuai Gambar 2 */
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        transition: 0.4s ease-in-out;
+        z-index: 9999;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        right: 0; /* Sidebar muncul */
+    }
+
+    /* Header di dalam Sidebar (Logo & X) */
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .sidebar-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .sidebar-logo img { width: 30px; }
+
+    .close-menu {
+        font-size: 32px;
+        cursor: pointer;
+        color: #191A23;
+        line-height: 1;
+    }
+
+    /* List Menu Mobile */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        border-bottom: 1px solid #EEEBFF; /* Garis pembatas sesuai Gambar 2 */
+    }
+
+    nav ul li a {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 0;
+        font-weight: 500;
+        color: #191A23;
+        text-decoration: none;
+    }
+
+    /* Footer Sidebar (Tombol Contact) */
+    .sidebar-footer {
+        display: block;
+        margin-top: auto; /* Dorong ke bawah */
+        padding-bottom: 20px;
+    }
+
+    .contact-btn-sidebar {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        border: 1.5px solid #191A23;
+        border-radius: 12px;
+        color: #191A23;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .hero {
+        flex-direction: column; /* Teks di atas, gambar di bawah */
+        padding: 124px 2%;
+        text-align: left;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .hero::before {
+        background-size: 100%; /* Background pattern menyesuaikan */
+        background-position: center bottom;
+    }
+
+    .hero-left-content {
+        max-width: 100%;
+        gap: 40px;
+    }
+
+    /* --- Tipografi Hero --- */
+    .hero-text h1 {
+        font-size: 40px; 
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        line-height: 1.5;
+        width: 100%; 
+    }
+
+    /* --- Search Box (Kunci Gambar 2) --- */
+    .search-box {
+        flex-direction: column; /* Item search bertumpuk vertikal */
+        align-items: flex-start;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .search-item {
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #EEEBFF; /* Garis pemisah antar item */
+    }
+
+    .search-item:last-of-type {
+        border-bottom: none;
+    }
+
+    .search-icon {
+        flex-shrink: 0;
+    }
+
+    .browse-btn {
+        width: 100%; /* Tombol Browse jadi full width */
+        padding: 16px;
+    }
+
+    /* --- Visual Hero Right (Gambar & Profile) --- */
+    .hero-right-content {
+        width: 100%;
+        height: 350px; /* Sesuaikan tinggi kontainer visual */
+        flex-basis: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Skala ulang ukuran gambar agar pas di layar kecil */
+    .top-house_wrapper {
+        left: 0;
+        max-width: 161px;
+    }
+
+    .top-house_image {
+        height: 172px;
+    }
+
+    .image-caption {
+        padding: 12px;
+        height: auto;
+    }
+
+    .image-caption p {
+      font-size: 10px;
+    }
+
+    .bottom-house {
+        right: 0;
+        max-width: 161px;
+        height: 250px;
+        top: 50%;
+    }
+
+    .profile-card {
+        width: 164px;
+        padding: 12px;
+        top: 20%; /* Geser posisi agar tidak menumpuk terlalu rapat */
+        right: 0;
+        left: 40%;
+    }
+
+    .profile-card_avatar img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .profile-card_info {
+      gap: 2px;
+    }
+
+    .profile-card_name {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .profile-card_role {
+      font-size: 8px;
+    }
+
+    .profile-card_socials span {
+      width: 10px;
+      height: 10px;
+      padding: 2px;
+    }
+
+    .featured {
+        padding: 64px 2%; /* Kurangi padding samping di mobile */
+    }
+
+    .featured-header {
+        flex-direction: column; /* Judul dan "Browse All" bertumpuk */
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .featured-title {
+        font-size: 32px; /* Perkecil ukuran judul */
+    }
+
+    /* --- LARGE CARD ADJUSTMENT --- */
+    .featured-card_large {
+        justify-content: center;
+        grid-template-columns: 1fr; /* Gambar di atas, konten di bawah */
+        max-height: none; /* Izinkan tinggi fleksibel */
+        margin: 0;
+    }
+
+    .featured-image_large img {
+        border-radius: 15px 15px 0 0; /* Ubah radius ke atas saja */
+        max-height: 300px;
+    }
+
+    .badge-large {
+        top: 20px; /* Geser sedikit badge agar pas */
+    }
+
+    .large-price_name {
+        flex-direction: column; /* Harga dan Agen bertumpuk */
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .large-title {
+      font-size: 24px;
+    }
+
+    .large-location {
+      font-size: 14px;
+    }
+
+    .large-desc {
+      font-size: 16px;
+    }
+
+    .large-link {
+      font-size: 16px;
+    }
+
+    .property-card {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto);   
+        gap: 20px;                      
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .property-item {
+        display: flex;
+        flex-direction: column; /* Label di atas, icon+angka di bawah */
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .property-item .content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* --- SMALL CARDS LIST --- */
+    .featured-list-small {
+        grid-template-columns: 1fr; /* Jadi 1 kolom di mobile */
+        gap: 24px;
+    }
+
+    .card-small {
+        max-height: none;
+        margin: 0;
+    }
+
+    .badge-small {
+        top: 160px; /* Sesuaikan posisi badge di atas gambar kecil */
+    }
+
+    .small-property_card {
+        flex-wrap: wrap; /* Izinkan icon turun jika layar sangat sempit */
+        gap: 12px;
+    }
+
+    .card-small_content {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .card-small_price {
+        font-size: 28px;
+    }
+
+    .benefits {
+    padding: 64px 20px;
+  }
+
+  .benefits-container {
+    gap: 40px; /* Kurangi gap di mobile */
+  }
+
+  .benefits-header {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .benefits-header_title {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .benefits-header_description {
+    max-width: 100%;
+  }
+
+  .benefits-card_list.swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    gap: 20px; /* Kurangi gap di mobile */
+  }
+
+  .benefits-card.swiper-slide {
+    width: 287px;
+    padding: 24px;
+    gap: 40px; /* Kurangi gap internal card */
+  }
+
+  .benefits-content {
+    max-width: 100%;
+  }
+
+  /* Show navigation di mobile */
+  .benefits-navigation {
+    display: flex !important;
+  }
+}
+
+
+
+
+/* 6. Desktop Reset (Penting!) */
+@media screen and (min-width: 993px) {
+    .menu-toggle, .sidebar-header, .sidebar-footer {
+    display: none; /* Sembunyikan elemen mobile di desktop */
+}
+    /* Pastikan nav kembali normal di desktop */
+    nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background: transparent;
+        display: flex;
+        right: auto;
+    }
+
+    .swiper-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
+
+  .benefits-card.swiper-slide {
+    width: 362px;
+    flex-shrink: 0;
+  }
+
+  /* Hide navigation di desktop */
+  .benefits-navigation {
+    display: none !important;
+  }
 }
 
 
