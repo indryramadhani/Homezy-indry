@@ -1,23 +1,25 @@
-.hanken-grotesk-700 {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}   
+  .hanken-grotesk-700 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }   
 
-.syne-600 {
-  font-family: "Syne", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
+  .syne-600 {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
 
 
-body {
+  html, body {
     font-family: "Hanken Grotesk", sans-serif;
     background: #FBFAFF;
     overflow-x: hidden;
-}
+    margin: 0;
+    padding: 0;
+  }
 
 header {
     display: flex;
@@ -40,10 +42,10 @@ header {
 }
 
 .logo-container a {
-  display: flex;           
-  align-items: center;     
-  gap: 8px;   
-  text-decoration: none;            
+    display: flex;           
+    align-items: center;     
+    gap: 8px;   
+    text-decoration: none;            
 }
 
 .logo-img {
@@ -92,6 +94,11 @@ nav ul li a {
     align-items: center;
     gap: 4px;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #C1A5FF;
 }
 
 nav ul li a svg {
@@ -100,65 +107,65 @@ nav ul li a svg {
 }
 
 .dropdown {
-  position: relative;
-  list-style: none;
+    position: relative;
+    list-style: none;
 }
 
 .dropbtn {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #191A23;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #191A23;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 500;
 }
 
 .arrow-icon {
-  width: 12px;
-  height: auto;
-  transition: transform 0.3s ease;
+    width: 12px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  padding: 32px;
-  border-radius: 24px; 
-  box-shadow: 24px 28px 92px 0px rgba(54, 17, 102, 0.12);
-  z-index: 999;
-  margin-top: 15px; 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 24px; 
+    box-shadow: 24px 28px 92px 0px rgba(54, 17, 102, 0.12);
+    z-index: 999;
+    margin-top: 15px; 
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdown:hover .arrow-icon {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .dropdown-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 220px); 
-  gap: 16px 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 220px); 
+    gap: 16px 24px;
 }
 
 .dropdown-grid a {
-  text-decoration: none;
-  color: #191A23;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 16px;
-  font-weight: 500; 
-  line-height: 26px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #191A23;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 500; 
+    line-height: 26px;
+    transition: color 0.2s ease;
 }
 
 .dropdown-grid a:hover {
-  color: #C1A5FF; 
+    color: #C1A5FF; 
 }
 
 .contact-btn {
@@ -180,7 +187,6 @@ nav ul li a svg {
     transition: all 0.3s ease;
 }
 
-
 .hero {
     position: relative;
     overflow: hidden;
@@ -194,77 +200,77 @@ nav ul li a svg {
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+    content: "";
+    position: absolute;
+    inset: 0;
 
-  background-image: url("../assets/HeroPattern.svg"); 
-  background-position: right center;
-  background-size: 50%;
-  background-repeat: no-repeat;
+    background-image: url("../assets/HeroPattern.svg"); 
+    background-position: right center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 
-  pointer-events: none;
-  z-index: 0;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-left-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-grow: 0;
-  gap: 32px;
-  max-width: 763px; 
-  width: 100%;
-  position: relative;
-  z-index: 2;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 0;
+    gap: 32px;
+    max-width: 763px; 
+    width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
 }
 
 .hero-text h1 {
-  font-family: "Syne", sans-serif;
-  font-size: 72px;
-  color: #191A23;
-  line-height: 88px;
-  letter-spacing: -4%;
-  width: auto;
-  max-width: 608px;
-  font-weight: 600;
-  margin: 0;
+    font-family: "Syne", sans-serif;
+    font-size: 72px;
+    color: #191A23;
+    line-height: 88px;
+    letter-spacing: -4%;
+    width: auto;
+    max-width: 608px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .hero-text p {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 0%;
-  color: #686A79;
-  width: 440px;
-  margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    color: #686A79;
+    width: 440px;
+    margin: 0;
 }
 
 .search-box {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: center;
-  padding: 20px;
-  background-color: #FFFFFF;
-  border: 1px solid #191A23;
-  border-radius: 15px;
-  margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #191A23;
+    border-radius: 15px;
+    margin: 0;
 }
 
 .search-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .search-icon {
@@ -279,336 +285,338 @@ nav ul li a svg {
 }
 
 .search-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .search-label {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 24px;
-  color: #686A79;
-  margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #686A79;
+    margin: 0;
 }
 .search-value {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #191A23;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #191A23;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 .browse-btn {
-  padding: 18px 40px;
-  background-color: #191A23;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 15px;
-  font-size: 1.125rem;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-weight: 700;
-  line-height: 22px;
-  cursor: pointer;
+    padding: 18px 40px;
+    background-color: #191A23;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.125rem;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: pointer;
 }
 .browse-btn:hover {
-  background-color: transparent;
-  border: 1px solid #191A23;
-  color: #191A23;
-  transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: 1px solid #191A23;
+    color: #191A23;
+    transition: background-color 0.3s ease;
 }
 
 .hero-right-content {
-  position: relative;
-  margin: 0;
-  width: 514px; 
-  height: 528px; 
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 40%;
-  z-index: 1;
+    position: relative;
+    margin: 0;
+    width: 514px; 
+    height: 528px; 
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40%;
+    z-index: 1;
 }
 
 .top-house_wrapper {
-  position: absolute;
-  max-width: 238px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  gap: 0;
+    position: absolute;
+    max-width: 238px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    gap: 0;
 }
 
 .top-house_image {
-  width: 100%;
-  height: 256px; 
-  border: 2px solid #191A23;
-  border-radius: 40px 40px 32px 0; 
-  overflow: hidden;
-  z-index: 2; 
-  position: relative;
+    width: 100%;
+    height: 256px; 
+    border: 2px solid #191A23;
+    border-radius: 40px 40px 32px 0; 
+    overflow: hidden;
+    z-index: 2; 
+    position: relative;
 }
 
 .top-house_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image-caption {
-  background-color: #191A23;
-  color: white;
-  padding: 20px;
-  width: 100%;
-  height: 105.4px; 
-  
-  margin-top: 10px; 
-  
-  border-radius: 0 0 40px 40px; 
-  border: 2px solid #E7DCFF;
-  box-sizing: border-box;
-  
-  display: flex;
-  align-items: center;
-  z-index: 1;
+    background-color: #191A23;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    height: 105.4px; 
+    
+    margin-top: 10px; 
+    
+    border-radius: 0 0 40px 40px; 
+    border: 2px solid #E7DCFF;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    z-index: 1;
 }
 
 .image-caption p {
-  margin: 0;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: center;
+    margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
 }
 
 .bottom-house {
-  position: absolute;
-  overflow: hidden;
-  max-width: 238px;
-  height: 340px;
-  bottom: 0;
-  right: 0;
-  border-radius: 40px;
-  border: 2px solid #191A23;
-  z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    max-width: 238px;
+    height: 340px;
+    bottom: 0;
+    right: 0;
+    border-radius: 40px;
+    border: 2px solid #191A23;
+    z-index: 1;
 }
 
 .bottom-house img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .profile-card {
-  position: absolute;
-  top: 7%;
-  right: 7%;
+    position: absolute;
+    top: 7%;
+    right: 7%;
 
-  width: 253px;
-  background: #ffffff;
-  border: 2px solid #191A23;
-  border-radius: 32px;
-  padding: 16.5px;
+    width: 253px;
+    background: #ffffff;
+    border: 2px solid #191A23;
+    border-radius: 32px;
+    padding: 16.5px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
 
-  z-index: 10;
-  box-sizing: border-box;
+    z-index: 10;
+    box-sizing: border-box;
 }
 
 .profile-card_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .profile-card_name {
-  font-family: "Syne", sans-serif;
-  font-size: 16.5px;
-  font-weight: 700;
-  color: #191A23;
-  line-height: 1.2;
-  letter-spacing: -3%;
-  margin: 0;
+    font-family: "Syne", sans-serif;
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #191A23;
+    line-height: 1.2;
+    letter-spacing: -3%;
+    margin: 0;
 }
 
 .profile-card_role {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: #686A79;
-  margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #686A79;
+    margin: 0;
 }
 
 .profile-card_avatar img {
-  width: 74px;
-  height: 74px;
-  border-radius: 10px;
-  background-color: #E7DCFF;
-  object-fit: cover;
+    width: 74px;
+    height: 74px;
+    border-radius: 10px;
+    background-color: #E7DCFF;
+    object-fit: cover;
 }
 
 .profile-card_socials {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .profile-card_socials span {
-  width: 25px;
-  height: 25px;
-  background: #686A79;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: #686A79;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .featured {
-  padding: 80px 10%; 
-  width: 100%;
-  box-sizing: border-box;
+    padding: 80px 10%; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .featured-container {
-  margin: 0 auto;    
-  width: 100%;
-  box-sizing: border-box;
+    margin: 0;    
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .featured-header {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  margin-bottom: 48px;
-  width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 48px;
+    width: 100%;
 }
 
 .featured-title {
-  font-family: "Syne", sans-serif;
-  font-size: 40px; 
-  font-weight: 700;
-  color: #191A23; 
-  margin: 0;
-  line-height: 1.1;
-  letter-spacing: -0.02em; 
+    font-family: "Syne", sans-serif;
+    font-size: 40px; 
+    font-weight: 700;
+    color: #191A23; 
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em; 
 }
 
 .featured_link-all {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #191A23;                
-  text-decoration: none;        
-  display: flex;
-  align-items: center;
-  gap: 8px;                    
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #191A23;                
+    text-decoration: none;        
+    display: flex;
+    align-items: center;
+    gap: 8px;                    
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
 }
 
 .featured_link-all:hover {
-  opacity: 0.7;                  
-  transform: translateX(4px);    
+    opacity: 0.7;                  
+    transform: translateX(4px);    
 
 }
 
 .featured-grid {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 40px; 
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+    width: 100%;
 }
 
 .featured-card_large {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  background-color: #FFFFFF;
-  border: 1px solid #E7DCFF; 
-  border-radius: 15px;
-  margin-left: 10px;      
-  max-height: 420px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    background-color: #FFFFFF;
+    border: 1px solid #E7DCFF; 
+    border-radius: 15px;
+    margin-left: 10px;      
+    max-height: 420px;
 }
 
 .featured-image_large {
-  position: relative;
+    position: relative;
 }
 
 .featured-image_large img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  display: block;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .badge-large {
-  position: absolute;
-  top: 32px;
-  left: -7px;
-  z-index: 5;
+    position: absolute;
+    top: 32px;
+    left: -7px;
+    z-index: 5;
 }
 
 .card-featured_content {
-  padding: 24px 32px;
-  gap: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    padding: 24px 32px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .large-top_content {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .large-price_name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .large-price_value {
-  font-family: "Syne", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -3%;
-  color: #191A23;
-  margin: 0;
+    font-family: "Syne", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -3%;
+    color: #191A23;
+    margin: 0;
 }
 
 .large-price_duration {
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 28px;
-  color: #686A79;
-  margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #686A79;
+    margin: 0;
 }
 
 .agent-info_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
 }
 
 .large-agent {
-  display: flex;
-  flex-direction: horizontal;
-  align-items: center;
-  gap: 32px;
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center;
+    gap: 32px;
 }
 
 .large-agent_info {
@@ -710,57 +718,52 @@ nav ul li a svg {
   margin-top: 20px;
 }
 
-/* Container Utama */
+
 .property-card {
   display: flex;
-  justify-content: space-around; /* Membagi ruang antar item secara merata */
+  justify-content: space-around; 
   align-items: center;
-  background-color: #F7F2FF;    /* Warna background ungu muda sesuai gambar */
-  padding: 20px;           /* Padding atas-bawah dan kiri-kanan */
+  background-color: #F7F2FF;    
+  padding: 20px;          
   border-radius: 15px;  
   gap: 48px;
-  /* Membuat sudut membulat halus */
-  font-family: "Hanken Grotesk", sans-serif; /* Menggunakan font clean modern */
-  max-width: 596px;             /* Lebar maksimal kartu */
-  margin: 20px auto;            /* Posisi tengah layar */
+  font-family: "Hanken Grotesk", sans-serif; 
+  max-width: 596px;             
+  margin: 20px auto;           
 }
 
-/* Tiap kolom (Label + Content) */
 .prop-item {
   display: flex;
-  flex-direction: row;       /* Label berada di atas icon/value */
-  gap: 8px;                    /* Jarak antara label dan isi di bawahnya */
+  flex-direction: row;      
+  gap: 8px;                   
 }
 
-/* Teks Label (Bedrooms, Bathrooms, dll) */
 .label {
-  color: #686A79;               /* Warna abu-abu pudar */
+  color: #686A79;               
   font-size: 16px;
   font-weight: 300;
-  white-space: nowrap;          /* Mencegah teks turun ke bawah jika sempit */
+  white-space: nowrap;          
 }
 
-/* Container untuk Icon + Angka/Teks */
+
 .content {
   display: flex;
-  align-items: center;          /* Menyejajarkan icon dan angka secara vertikal */
-  gap: 8px;                    /* Jarak antara icon dan angka */
+  align-items: center;          
+  gap: 8px;                   
 }
 
-/* Pengaturan Ikon SVG/Gambar */
 .icon img {
-  width: 24px;                  /* Ukuran ikon yang ideal */
+  width: 24px;                 
   height: 24px;
   display: block;
   object-fit: contain;
 }
 
-/* Teks Nilai (4, 6x8 m2, Modern Loft) */
 .value {
-  color: #191A23;               /* Warna hitam pekat */
+  color: #191A23;               
   font-size: 16px;
   font-weight: 700;
-  line-height: 20px;             /* Membuat teks menjadi tebal (bold) */
+  line-height: 20px;             
   white-space: nowrap;
 }
 
@@ -769,7 +772,7 @@ nav ul li a svg {
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   width: 100%;
-  max-width: 1162px; 
+  max-width: 1262px; 
   margin: 0 auto;
 }
 
@@ -778,6 +781,7 @@ nav ul li a svg {
   border: 1px solid #E7DCFF;
   border-radius: 15px;
   margin-left: 10px;
+  width: auto;
   max-height: 420px;
   display: flex;
   flex-direction: column;
@@ -814,7 +818,6 @@ nav ul li a svg {
   border-top-right-radius: 15px;
 }
 
-/* Container Utama */
 .card-small_content {
   background: #fff;
   padding: 24px 32px;
@@ -823,7 +826,6 @@ nav ul li a svg {
   gap: 16px;
 }
 
-/* Harga */
 .card-small_price {
   font-family: "Syne", sans-serif;
   display: block;
@@ -835,7 +837,6 @@ nav ul li a svg {
   margin-bottom: 8px;
 }
 
-/* Judul Properti */
 .card-small_title {
   font-family: "Syne", sans-serif;
   font-size: 24px;
@@ -845,7 +846,6 @@ nav ul li a svg {
   margin: 0 0 12px 0;
 }
 
-/* Lokasi */
 .card-small_location {
   font-family: "Hanken Grotesk", sans-serif;
   color: #686A79;
@@ -853,25 +853,22 @@ nav ul li a svg {
   margin-bottom: 20px;
 }
 
-/* Garis Pemisah Abu-abu */
 .divider {
   border: 0;
   border-top: 1px solid #F7F2FF;
   margin-bottom: 16px;
 }
 
-/* Container Ikon (Flexbox) */
 .small-property_card {
   display: flex;
-  gap: 20px; /* Jarak antar item (Bed, Bath, Area) */
+  gap: 20px; 
   align-items: center;
 }
 
-/* Tiap Item Properti */
 .prop-item {
   display: flex;
   align-items: center;
-  gap: 8px; /* Jarak antara gambar ikon dan teks */
+  gap: 8px; 
 }
 
 .prop-item img {
@@ -890,6 +887,8 @@ nav ul li a svg {
   padding: 80px 10%; 
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .benefits-container { 
@@ -897,8 +896,9 @@ nav ul li a svg {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 64px;
   align-items: center;
+  margin: 0;
 }
 
 .benefits-header {
@@ -907,7 +907,6 @@ nav ul li a svg {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 56px;
 }
 
 .benefits-header_title {
@@ -934,31 +933,20 @@ nav ul li a svg {
   text-align: left;
 }
 
-/* Container Swiper */
 .benefits-card_list.swiper {
   width: 100%;
-  overflow: hidden;
-  padding: 0; /* HAPUS padding di sini karena sudah ada di .benefits */
+  overflow: visible;
 }
 
-/* Swiper wrapper - parent dari slides */
-.swiper-wrapper {
-  display: flex;
-  gap: 32px;
-  transition-timing-function: ease-out;
-}
-
-/* Individual card/slide */
 .benefits-card.swiper-slide {
   background: #FFFFFF;
   border: 1px solid #191A23; 
   border-radius: 15px;
   padding: 40px;
-  width: 362px;
-  flex-shrink: 0;
+  height: 352px; 
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  justify-content: space-between; 
   box-sizing: border-box;
 }
 
@@ -997,7 +985,6 @@ nav ul li a svg {
   line-height: 26px;
 }
 
-/* Navigation buttons - hidden di desktop */
 .benefits-navigation {
   display: none;
   gap: 16px;
@@ -1241,7 +1228,7 @@ a.categories-card_link:hover {
   transform: translateX(4px);    
 }
 
-.cities-card_list {
+.cities-card_list.swiper {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1250,12 +1237,11 @@ a.categories-card_link:hover {
   flex-wrap: wrap;
 }
 
-.cities-card {
+.cities-card.swiper-slide {
   position: relative;
   background-color: #FFFFFF;
   width: 100%;
   flex: 1 1 300px;
-  max-width: 366px;
   border-radius: 15px;
   border: 1px solid #E7DCFF;
   overflow: hidden;
@@ -1305,6 +1291,13 @@ img.cities-card_image {
   color: #686A79;
 }
 
+.cities-navigation {
+  display: none;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
 .agents {
   padding: 80px 10%; 
   width: 100%;
@@ -1314,12 +1307,11 @@ img.cities-card_image {
 
 .agents-container {
   width: 100%;
-  margin: 0 auto;
   box-sizing: border-box;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 64px;
-  align-items: center;
 }
 
 .agents-header {
@@ -1358,15 +1350,20 @@ img.cities-card_image {
   transform: translateX(4px);   
 }
 
-.agents-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+.agents-grid.swiper {
   gap: 40px; 
   width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
-.agents-card {
+.agents-grid .swiper-wrapper {
+  display: flex;
+}
+
+.agents-card.swiper-slide {
+  width: auto;
+  height: 156px;
   background: #FFFFFF;
   border: 1px solid #E7DCFF;
   border-radius: 15px;
@@ -1374,6 +1371,7 @@ img.cities-card_image {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .agents-info {
@@ -1409,22 +1407,29 @@ img.cities-card_image {
 .agents-socials {
   display: flex;
   gap: 12px;
+  margin-top: 12px;
 }
 
 .agents-socials span {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background: #191A23;
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.agents-socials span:hover {
+  opacity: 0.7;
 }
 
 .agents-socials span img {
-  width: 16px; 
-  height: 16px;
+  width: 14px; 
+  height: 14px;
   object-fit: contain;
 }
 
@@ -1434,6 +1439,13 @@ img.cities-card_image {
   border-radius: 15px;
   background-color: #FFE1F2;
   object-fit: cover;
+}
+
+.agents-navigation {
+  display: none;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: center;
 }
 
 .testimonials {
@@ -1451,7 +1463,6 @@ img.cities-card_image {
   gap: 64px;              
   padding: 80px 0;        
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1637,7 +1648,7 @@ swiper-slide {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 50%; /* Mengambil setengah lebar kartu sebelah kanan */
+  width: 50%; 
   
   background-image: url("../assets/cta-pattern.svg"); 
   background-position: center right;
@@ -1645,7 +1656,7 @@ swiper-slide {
   background-repeat: no-repeat;
 
   pointer-events: none;
-  z-index: 1; /* Pastikan di atas background kartu */
+  z-index: 1; 
 }
 
 .cta-card {
@@ -1918,22 +1929,39 @@ footer {
 
 /* RESPONSIVE */
 @media screen and (max-width: 992px) {
-    /* 1. Sembunyikan elemen desktop yang tidak perlu */
+   
     header {
-    width: 375px;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 2%
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    position: fixed;
 }
 
-    /* Munculkan Hamburger */
+  .logo-container {
+    flex-shrink: 0;
+    z-index: 1001;
+  }
+
+  .logo-img {
+    width: 2rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem; 
+  }
+   
     .menu-toggle {
         display: flex;
         flex-direction: column;
         gap: 6px;
         cursor: pointer;
-        z-index: 100;
+        z-index: 1001;
+        flex-shrink: 0;
     }
 
     .menu-toggle .bar {
@@ -1943,40 +1971,39 @@ footer {
         border-radius: 2px;
     }
 
-    /* Sembunyikan Tombol Contact Desktop */
     header .contact-btn {
         display: none;
     }
 
-    /* Sidebar Sidebar Styling */
     nav {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Sembunyi di kanan */
-        width: 85%;
-        max-width: 375px;
-        height: 100vh;
-        background: #F8F7FF; /* Warna sesuai Gambar 2 */
-        display: flex;
-        flex-direction: column;
-        padding: 24px;
-        transition: 0.4s ease-in-out;
-        z-index: 9999;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-    }
+    position: fixed;
+    top: 0;
+    right: -110%; 
+    width: 100%;
+    max-width: 375px; 
+    height: 100vh;
+    background: #FBFAFF; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 32px 20px; 
+    transition: 0.4s ease-in-out;
+    z-index: 9999;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
 
     nav.active {
-        right: 0; /* Sidebar muncul */
+        right: 0; 
     }
 
-    /* Header di dalam Sidebar (Logo & X) */
     .sidebar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px; 
+}
     .sidebar-logo {
         display: flex;
         align-items: center;
@@ -1994,63 +2021,120 @@ footer {
         line-height: 1;
     }
 
-    /* List Menu Mobile */
     nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     position: relative;
+    align-items: flex-start;
+    gap: 0; 
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+}
 
-    nav ul li {
-        border-bottom: 1px solid #EEEBFF; /* Garis pembatas sesuai Gambar 2 */
-    }
+nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #F3F0FF; 
+    display: flex;
+    flex-direction: column;
+}
 
-    nav ul li a {
-        display: flex;
-        justify-content: space-between;
-        padding: 18px 0;
-        font-weight: 500;
-        color: #191A23;
-        text-decoration: none;
-    }
+nav ul li a {
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #191A23;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+}
 
-    /* Footer Sidebar (Tombol Contact) */
+.sidebar-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.dropdown-content {
+    display: none; 
+    width: 100%;
+    padding: 4px;
+}
+
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 8px 12px;
+}
+
+li.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+nav ul li a i {
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+li.dropdown.active > a i {
+    transform: rotate(90deg);
+}
+
     .sidebar-footer {
-        display: block;
-        margin-top: auto; /* Dorong ke bawah */
-        padding-bottom: 20px;
-    }
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 8px;
+}
 
     .contact-btn-sidebar {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        border: 1.5px solid #191A23;
-        border-radius: 12px;
-        color: #191A23;
-        font-weight: 600;
-        text-decoration: none;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px; 
+    border: 1.5px solid #191A23;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #191A23;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
     .hero {
-        flex-direction: column; /* Teks di atas, gambar di bawah */
-        padding: 124px 2%;
+        flex-direction: column; 
+        padding: 120px 5%;
         text-align: left;
         gap: 40px;
         min-height: auto;
     }
 
     .hero::before {
-        background-size: 100%; /* Background pattern menyesuaikan */
+        background-size: 100%; 
         background-position: center bottom;
     }
 
     .hero-left-content {
         max-width: 100%;
-        gap: 40px;
+        gap: 32px;
+        padding: 0;
     }
 
-    /* --- Tipografi Hero --- */
+    .hero-text {
+      padding: 0;
+      width: 100%;
+    }
+ 
     .hero-text h1 {
         font-size: 40px; 
         line-height: 1.2;
@@ -2063,9 +2147,8 @@ footer {
         width: 100%; 
     }
 
-    /* --- Search Box (Kunci Gambar 2) --- */
     .search-box {
-        flex-direction: column; /* Item search bertumpuk vertikal */
+        flex-direction: column;
         align-items: flex-start;
         padding: 24px;
         gap: 20px;
@@ -2074,7 +2157,7 @@ footer {
     .search-item {
         width: 100%;
         padding-bottom: 12px;
-        border-bottom: 1px solid #EEEBFF; /* Garis pemisah antar item */
+        border-bottom: 1px solid #EEEBFF;
     }
 
     .search-item:last-of-type {
@@ -2086,21 +2169,19 @@ footer {
     }
 
     .browse-btn {
-        width: 100%; /* Tombol Browse jadi full width */
+        width: 100%;
         padding: 16px;
     }
 
-    /* --- Visual Hero Right (Gambar & Profile) --- */
     .hero-right-content {
         width: 100%;
-        height: 350px; /* Sesuaikan tinggi kontainer visual */
+        height: 350px; 
         flex-basis: auto;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* Skala ulang ukuran gambar agar pas di layar kecil */
     .top-house_wrapper {
         left: 0;
         max-width: 161px;
@@ -2129,7 +2210,7 @@ footer {
     .profile-card {
         width: 164px;
         padding: 12px;
-        top: 20%; /* Geser posisi agar tidak menumpuk terlalu rapat */
+        top: 20%; 
         right: 0;
         left: 40%;
     }
@@ -2159,39 +2240,38 @@ footer {
     }
 
     .featured {
-        padding: 64px 2%; /* Kurangi padding samping di mobile */
+        padding: 64px 4%; 
     }
 
     .featured-header {
-        flex-direction: column; /* Judul dan "Browse All" bertumpuk */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 16px;
         margin-bottom: 32px;
     }
 
     .featured-title {
-        font-size: 32px; /* Perkecil ukuran judul */
+        font-size: 32px; 
     }
 
-    /* --- LARGE CARD ADJUSTMENT --- */
     .featured-card_large {
         justify-content: center;
-        grid-template-columns: 1fr; /* Gambar di atas, konten di bawah */
-        max-height: none; /* Izinkan tinggi fleksibel */
+        grid-template-columns: 1fr;
+        max-height: none; 
         margin: 0;
     }
 
     .featured-image_large img {
-        border-radius: 15px 15px 0 0; /* Ubah radius ke atas saja */
+        border-radius: 15px 15px 0 0; 
         max-height: 300px;
     }
 
     .badge-large {
-        top: 20px; /* Geser sedikit badge agar pas */
+        top: 20px; 
     }
 
     .large-price_name {
-        flex-direction: column; /* Harga dan Agen bertumpuk */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 20px;
     }
@@ -2223,7 +2303,7 @@ footer {
 
     .property-item {
         display: flex;
-        flex-direction: column; /* Label di atas, icon+angka di bawah */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 8px;
         width: 100%;
@@ -2235,9 +2315,8 @@ footer {
         gap: 8px;
     }
 
-    /* --- SMALL CARDS LIST --- */
     .featured-list-small {
-        grid-template-columns: 1fr; /* Jadi 1 kolom di mobile */
+        grid-template-columns: 1fr; 
         gap: 24px;
     }
 
@@ -2247,11 +2326,11 @@ footer {
     }
 
     .badge-small {
-        top: 160px; /* Sesuaikan posisi badge di atas gambar kecil */
+        top: 160px;
     }
 
     .small-property_card {
-        flex-wrap: wrap; /* Izinkan icon turun jika layar sangat sempit */
+        flex-wrap: wrap; 
         gap: 12px;
     }
 
@@ -2265,11 +2344,11 @@ footer {
     }
 
     .benefits {
-    padding: 64px 20px;
+    padding: 64px 5%;
   }
 
   .benefits-container {
-    gap: 40px; /* Kurangi gap di mobile */
+    gap: 40px; 
   }
 
   .benefits-header {
@@ -2289,40 +2368,479 @@ footer {
   }
 
   .benefits-card_list.swiper {
+    align-items: center;
+    justify-content: center;
     width: 100%;
     overflow: hidden;
-  }
-
-  .swiper-wrapper {
-    display: flex;
-    gap: 20px; /* Kurangi gap di mobile */
   }
 
   .benefits-card.swiper-slide {
     width: 287px;
     padding: 24px;
-    gap: 40px; /* Kurangi gap internal card */
+    gap: 40px; 
   }
 
   .benefits-content {
     max-width: 100%;
   }
 
-  /* Show navigation di mobile */
   .benefits-navigation {
     display: flex !important;
+  }
+
+  .categories {
+    padding: 64px 5%;
+  }
+
+  .categories-container {
+    gap: 32px;
+  }
+
+  .categories-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .categories-header_title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .categories-header_link {
+    font-size: 18px;
+    align-items: flex-start;
+  }
+
+  .categories-card_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .categories-card {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+
+  .categories-card_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+  }
+  
+  .categories-card_title {
+    font-size: 20px;
+  }
+
+  .categories-card_count {
+    font-size: 18px;
+  }
+
+  .categories-card_link {
+    font-size: 16px;
+  }
+
+  .cities {
+    padding: 64px 5%;
+  }
+
+  .cities-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .cities-header_title {
+    font-size: 32px;
+  }
+
+  .cities-container {
+    gap: 32px;
+  }
+
+   .cities-card_list.swiper {
+    display: block;
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .cities-card.swiper-slide {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .cities-card_image {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .cities-card_text {
+    padding: 20px;
+  }
+
+  .cities-card_name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .cities-card_count {
+    font-size: 16px;
+  }
+
+  .cities-navigation {
+    display: flex !important;
+  }
+
+  .agents {
+    padding: 64px 5%; 
+  }
+
+  .agents-container {
+    gap: 32px;
+  }
+
+  .agents-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .agents-header_title {
+    font-size: 32px;
+  }
+
+  .agents-grid.swiper {
+    display: block !important; 
+    overflow: visible; 
+    width: 100%;
+    padding: 0; 
+  }
+
+  .swiper-wrapper {
+    display: flex !important; 
+    width: 100%;
+  }
+
+  .agents-card.swiper-slide {
+    width: 100%; 
+    max-width: 335px;
+    height: auto;
+    min-height: 120px; 
+    flex-shrink: 0;
+    padding: 16px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px; 
+    box-sizing: border-box;
+  }
+
+  .agents-info {
+    flex: 1;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .agents-name {
+    font-size: 20px; 
+    line-height: 28px;
+    letter-spacing: -0.04em;
+    margin: 0;
+  }
+
+  .agents-role {
+    font-size: 14px; 
+    line-height: 20px;
+    color: #686A79;
+    margin: 0 0 8px 0;
+  }
+
+  .agents-socials {
+    gap: 8px; 
+    margin-top: 8px;
+  }
+
+  .agents-socials span {
+    width: 28px;
+    height: 28px;
+  }
+
+  .agents-socials span img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .agent-photo {
+    flex-shrink: 0;
+  }
+
+  .agent-photo img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 12px;
+  }
+
+  .agents-navigation {
+    display: flex !important;
+    gap: 16px;
+    margin-top: 32px;
+    justify-content: center;
+    padding: 0 20px; 
+  }
+
+  .testimonials {
+    padding: 64px 5%;
+    overflow: hidden;
+  }
+
+  .testimonials-wrapper {
+    gap: 48px;
+    padding: 0;
+  }
+
+  .testimonials-header {
+    width: 100%;
+    padding: 0;
+  }
+
+  .testimonials-header_title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .testimonials-container {
+    padding: 0;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .testimonials-content {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .testimonialSwiper {
+    padding: 0;
+    overflow: visible;
+  }
+
+  swiper-slide {
+    width: 100% !important;
+    max-width: 335px;
+    height: auto;
+  }
+
+  .testimonials-card {
+    width: 100%;
+    max-width: 335px;
+    min-width: auto;
+    padding: 64px 20px;
+    gap: 8px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .stars {
+    margin-bottom: 32px;
+    justify-content: flex-start;
+  }
+
+  .stars img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .testimonial-text {
+    font-size: 18px;
+    line-height: 28px;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .testimonial-footer {
+    min-width: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  .user-name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .user-role {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .company-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .testimonial-btn_container {
+    margin-top: 48px;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .arrow-left img,
+  .arrow-right img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cta {
+    padding: 64px 5% 0 5%;
+  }
+
+  .cta-card {
+    padding: 24px;
+    max-width: 335px;
+    height: 540px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px solid #191A23;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    top: auto;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .cta-content {
+    max-width: 100%;
+    gap: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cta-text {
+    gap: 8px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+    line-height: 40px;
+    max-width: 100%;
+  }
+
+  .cta-description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .cta-newsletter_form {
+    flex-direction: column;
+    padding: 0;
+    background: transparent;
+    border: none;
+    gap: 16px;
+    margin-bottom: 1200px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    border: 1px solid #D6D7E0;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  footer {
+    padding: 64px 5% 32px 5%;
+  }
+
+  .footer-wrapper {
+    gap: 8px;
+    align-items: flex-start; 
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+    gap: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column; 
+    gap: 48px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-flow: row;
+    grid-template-rows: unset; 
+    gap: 16px 20px; 
+  }
+
+  .footer-label {
+    margin-bottom: -16px; 
+  }
+
+  .footer-bottom {
+    text-align: center; 
   }
 }
 
 
-
-
-/* 6. Desktop Reset (Penting!) */
+/* Desktop Reset */
 @media screen and (min-width: 993px) {
     .menu-toggle, .sidebar-header, .sidebar-footer {
-    display: none; /* Sembunyikan elemen mobile di desktop */
+    display: none; 
 }
-    /* Pastikan nav kembali normal di desktop */
+   
     nav {
         position: static;
         height: auto;
@@ -2332,19 +2850,29 @@ footer {
         right: auto;
     }
 
-    .swiper-wrapper {
-    display: flex !important;
-    flex-wrap: nowrap;
-    gap: 32px;
-  }
-
-  .benefits-card.swiper-slide {
-    width: 362px;
-    flex-shrink: 0;
-  }
-
-  /* Hide navigation di desktop */
   .benefits-navigation {
+    display: none !important;
+  }
+
+  .agents-grid.swiper {
+    overflow: visible; 
+  }
+
+  .agents-grid .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 32px 40px; 
+    transform: none !important; 
+    width: 100% !important;
+  }
+
+  .agents-card.swiper-slide {
+    width: 100% !important; 
+    margin: 0 !important;
+    height: 156px;
+  }
+
+  .agents-navigation {
     display: none !important;
   }
 }

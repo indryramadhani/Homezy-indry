@@ -61,20 +61,22 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   </head>
 
 
   <body>
     <header>
-    <div class="logo-container">
+    <div class="logo-container" data-aos="fade" data-aos-duration="500">
       <a href="index.html">
         <img src="assets/Logo.svg" alt="Homezy Logo" class="logo-img" />
         <span class="logo-text"> Homezy </span>
       </a>
     </div>
 
-    <div class="menu-toggle" id="mobile-menu">
+    <div class="menu-toggle" id="mobile-menu" data-aos="fade" data-aos-delay="100" data-aos-duration="500">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -82,18 +84,18 @@
 
     <nav id="nav-menu">
       <div class="sidebar-header">
-        <div class="sidebar-logo">
+        <div class="sidebar-logo" data-aos="fade" data-aos-delay="200" data-aos-duration="500">
           <img src="assets/Logo.svg" alt="Homezy Logo" />
           <span class="logo-text">Homezy</span>
         </div>
-        <div class="close-menu" id="close-menu">&times;</div>
+        <div class="close-menu" id="close-menu" data-aos="fade" data-aos-delay="300" data-aos-duration="500">&times;</div>
       </div>
 
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Properties</a></li>
-        <li><a href="#">Agents</a></li>
-        <li class="dropdown">
+        <li data-aos="fade" data-aos-delay="400" data-aos-duration="500"><a href="#">Home</a></li>
+        <li data-aos="fade" data-aos-delay="450" data-aos-duration="500"><a href="#">Properties</a></li>
+        <li data-aos="fade" data-aos-delay="500" data-aos-duration="500"><a href="#">Agents</a></li>
+        <li class="dropdown" data-aos="fade" data-aos-delay="550" data-aos-duration="500">
           <a href="#" class="dropbtn">
             Pages
             <img src="assets/arrow-down.svg" alt="Dropdown Icon" class="arrow-icon">
@@ -102,21 +104,34 @@
             <div class="dropdown-grid">
               <a href="#">Home V1</a>
               <a href="#">Home V2</a>
+              <a href="#">Search Properties V1</a>
+              <a href="#">Search Properties V2</a>
+              <a href="#">Property Details V1</a>
+              <a href="#">Property Details V2</a>
+              <a href="#">Agent List V1</a>
+              <a href="#">Agent List V2</a>
+              <a href="#">Agent Details V1</a>
+              <a href="#">Agent Details V2</a>
+              <a href="#">About Us V1</a>
+              <a href="#">About Us V2</a>
+              <a href="#">Contact Us V1</a>
+              <a href="#">Contact Us V2</a>
+              <a href="#">FAQ</a>
               </div>
           </div>
         </li>
       </ul>
 
       <div class="sidebar-footer">
-        <a href="#" class="contact-btn-sidebar">Contact Us</a>
+        <a href="#" class="contact-btn-sidebar" data-aos="fade" data-aos-delay="600" data-aos-duration="500">Contact Us</a>
       </div>
     </nav>
 
-  <a href="#" class="contact-btn">Contact Us</a>
-</header>
+      <a href="#" class="contact-btn" data-aos="fade" data-aos-delay="600" data-aos-duration="500">Contact Us</a>
+    </header>
 
     <section id="hero" class="hero">
-      <div class="hero-left-content">
+      <div class="hero-left-content" data-aos="fade-right" data-aos-delay="600" data-aos-duration="500">
         <div class="hero-text">
           <h1>We help people to realize their dream property</h1>
           <p>
@@ -254,7 +269,7 @@
         </div>
       </div>
 
-      <div class="hero-right-content">
+      <div class="hero-right-content" data-aos="fade-left" data-aos-delay="600" data-aos-duration="500">
         <div class="top-house_wrapper">
           <div class="top-house_image">
             <img src="assets/home1.png" alt="House 1" />
@@ -291,16 +306,16 @@
     <section class="featured">
       <div class="featured-container">
         <!-- HEADER -->
-        <div class="featured-header">
+        <div class="featured-header" data-aos="fade-up" data-aos-duration="700">
           <h2 class="featured-title">Featured Listings</h2>
-          <a href="#" class="featured_link-all"> Browse All Featured 
+          <a href="#" class="featured_link-all" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700"> Browse All Featured 
             <img src="assets/arrow-right-2.svg" alt="Arrow Right" class="browse-icon"> </a>
         </div>
 
         <!-- GRID -->
         <div class="featured-grid">
           <!-- LARGE CARD -->
-          <article class="featured-card_large">
+          <article class="featured-card_large" data-aos="fade-right" data-aos-delay="200" data-aos-duration="700">
             <span class="badge-large"
               ><img src="assets/Featured.svg" alt="Featured Badge"
             /></span>
@@ -395,7 +410,7 @@
           </article>
 
           <div class="featured-list-small">
-            <article class="card-small">
+            <article class="card-small" data-aos="fade-left" data-aos-delay="200" data-aos-duration="700">
               
               <div class="image-wrapper">
                 <img src="assets/home1.png" alt="Luxury Villa" />
@@ -427,7 +442,7 @@
           </div>
             </article>
 
-            <article class="card-small">
+            <article class="card-small" data-aos="fade-left" data-aos-delay="250" data-aos-duration="700">
               
               <div class="image-wrapper">
                 <img src="assets/featured-small_1.png" alt="Modern House" />
@@ -459,7 +474,7 @@
           </div>
             </article>
 
-            <article class="card-small">
+            <article class="card-small" data-aos="fade-left" data-aos-delay="300" data-aos-duration="700">
               <div class="image-wrapper">
                 <img src="assets/home2.png" alt="Family Home" />
               </div>
@@ -496,7 +511,7 @@
 
    <section class="benefits">
   <div class="benefits-container">
-    <div class="benefits-header">
+    <div class="benefits-header" data-aos="fade-up" data-aos-duration="700">
       <h2 class="benefits-header_title">Comfort Is Our Top Priority For You</h2>
       <p class="benefits-header_description">We guarantee that the products we sell will make our customers happy because we are very concerned about our consumer satisfaction</p>
     </div>
@@ -505,7 +520,7 @@
     <div class="benefits-card_list swiper">
       <!-- INI WRAPPER SWIPER -->
       <div class="swiper-wrapper">
-        <div class="benefits-card swiper-slide">
+        <div class="benefits-card swiper-slide" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
           <div class="benefits-icon_wrapper">
             <img src="assets/coin.svg" alt="Support Icon">
           </div>
@@ -515,7 +530,7 @@
           </div>
         </div>
 
-        <div class="benefits-card swiper-slide">
+        <div class="benefits-card swiper-slide" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
           <div class="benefits-icon_wrapper">
             <img src="assets/like-shapes.svg" alt="Support Icon">
           </div>
@@ -525,7 +540,7 @@
           </div>
         </div>
 
-        <div class="benefits-card swiper-slide">
+        <div class="benefits-card swiper-slide" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
           <div class="benefits-icon_wrapper">
             <img src="assets/people.svg" alt="Support Icon">
           </div>
@@ -537,7 +552,7 @@
       </div>
     </div>
 
-    <div class="benefits-navigation">
+    <div class="benefits-navigation" data-aos="fade" data-aos-duration="700">
       <div class="swiper-button-prev-custom"><img src="assets/arrow-left.svg" alt="Prev"></div>
       <div class="swiper-button-next-custom"><img src="assets/arrow-right.svg" alt="Next"></div>
     </div>
@@ -546,7 +561,7 @@
 
     <section class="categories">
       <div class="categories-container">
-        <div class="categories-header">
+        <div class="categories-header" data-aos="fade-up" data-aos-duration="700">
           <h2 class="categories-header_title">
             Featured Categories
           </h2>
@@ -557,7 +572,7 @@
         </div>
 
         <div class="categories-card_list">
-          <div class="categories-card">
+          <div class="categories-card" data-aos="fade-in" data-aos-delay="400" data-aos-duration="700">
             <div class="categories-card_info">
               <div class="categories-card_icon-wrapper">
                 <img src="assets/buildings.svg" alt="Studio" class="categories-card_icon">
@@ -575,7 +590,7 @@
             </div>
           </div>
 
-          <div class="categories-card">
+          <div class="categories-card" data-aos="fade-in" data-aos-delay="500" data-aos-duration="700">
             <div class="categories-card_info">
               <div class="categories-card_icon-wrapper">
                 <img src="assets/buliding.svg" alt="Studio" class="categories-card_icon">
@@ -593,7 +608,7 @@
             </div>
           </div>
 
-          <div class="categories-card">
+          <div class="categories-card" data-aos="fade-in" data-aos-delay="600" data-aos-duration="700">
             <div class="categories-card_info">
               <div class="categories-card_icon-wrapper">
                 <img src="assets/buildings-2.svg" alt="Studio" class="categories-card_icon">
@@ -616,7 +631,7 @@
 
     <section class="cities">
       <div class="cities-container">
-        <div class="cities-header">
+        <div class="cities-header" data-aos="fade-up" data-aos-duration="700">
           <h2 class="cities-header_title">
             Explore Cities
           </h2>
@@ -626,8 +641,9 @@
           </a>
         </div>
 
-        <div class="cities-card_list">
-          <div class="cities-card">
+        <div class="cities-card_list swiper">
+          <div class="swiper-wrapper">
+            <div class="cities-card swiper-slide" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
             <img src="assets/city1.png" alt="Oklahoma" class="cities-card_image">
             <div class="cities-card_text">
               <h5 class="cities-card_name">Pasadena, Oklahoma</h5>
@@ -639,7 +655,7 @@
             </div>
           </div>
 
-          <div class="cities-card">
+          <div class="cities-card swiper-slide" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
             <img src="assets/city2.png" alt="California" class="cities-card_image">
             <div class="cities-card_text">
               <h5 class="cities-card_name">Lafayette, California</h5>
@@ -651,7 +667,7 @@
             </div>
           </div>
 
-          <div class="cities-card">
+          <div class="cities-card swiper-slide" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700">
             <img src="assets/city3.png" alt="New York" class="cities-card_image">
             <div class="cities-card_text">
               <h5 class="cities-card_name">New York</h5>
@@ -662,13 +678,20 @@
               </div>
             </div>
           </div>
+          </div>
+
+          <div class="cities-navigation" data-aos="fade-in" data-aos-duration="700">
+      <div class="swiper-button-prev-custom"><img src="assets/arrow-left.svg" alt="Prev"></div>
+      <div class="swiper-button-next-custom"><img src="assets/arrow-right.svg" alt="Next"></div>
+    </div>
+          
         </div>
       </div>
     </section>
 
     <section class="agents">
       <div class="agents-container">
-        <div class="agents-header">
+        <div class="agents-header" data-aos="fade-up" data-aos-duration="700">
           <h2 class="agents-header_title">
             Meet Our Agents
           </h2>
@@ -678,8 +701,9 @@
           </a>
         </div>
 
-        <div class="agents-grid">
-          <div class="agents-card">
+        <div class="agents-grid swiper">
+          <div class="swiper-wrapper">
+            <div class="agents-card swiper-slide" data-aos="fade-left" data-aos-delay="400" data-aos-duration="700">
             <div class="agents-info">
               <h5 class="agents-name">Edwin Martins</h5>
               <p class="agents-role">Property Advisor</p>
@@ -695,7 +719,7 @@
             </div>
           </div>
 
-          <div class="agents-card">
+          <div class="agents-card swiper-slide" data-aos="fade-left" data-aos-delay="500" data-aos-duration="700">
             <div class="agents-info">
               <h5 class="agents-name">Robert Fox</h5>
               <p class="agents-role">Property Advisor</p>
@@ -711,7 +735,7 @@
             </div>
           </div>
 
-          <div class="agents-card">
+          <div class="agents-card swiper-slide" data-aos="fade-left" data-aos-delay=600" data-aos-duration="700">
             <div class="agents-info">
               <h5 class="agents-name">Jane Cooper</h5>
               <p class="agents-role">Property Advisor</p>
@@ -727,7 +751,7 @@
             </div>
           </div>
 
-          <div class="agents-card">
+          <div class="agents-card swiper-slide" data-aos="fade-right" data-aos-delay="400" data-aos-duration="700">
             <div class="agents-info">
               <h5 class="agents-name">Guy Hawkins</h5>
               <p class="agents-role">Property Advisor</p>
@@ -743,7 +767,7 @@
             </div>
           </div>
 
-          <div class="agents-card">
+          <div class="agents-card swiper-slide" data-aos="fade-right" data-aos-delay="500" data-aos-duration="700">
             <div class="agents-info">
               <h5 class="agents-name">Kathryn Murphy</h5>
               <p class="agents-role">Property Advisor</p>
@@ -759,7 +783,7 @@
             </div>
           </div>
 
-          <div class="agents-card">
+          <div class="agents-card swiper-slide" data-aos="fade-right" data-aos-delay="600" data-aos-duration="700">
             <div class="agents-info">
               <h5 class="agents-name">Albert Flores</h5>
               <p class="agents-role">Property Advisor</p>
@@ -774,14 +798,19 @@
               <img src="assets/agent-6.png" alt="Edwin">
             </div>
           </div>
-  
+          </div>
+          
+          <div class="agents-navigation" data-aos="fade-in" data-aos-delay="400" data-aos-duration="700">
+      <div class="swiper-button-prev-custom"><img src="assets/arrow-left.svg" alt="Prev"></div>
+      <div class="swiper-button-next-custom"><img src="assets/arrow-right.svg" alt="Next"></div>
+    </div>
         </div>
       </div>
     </section>
 
         <section class="testimonials">
       <div class="testimonials-wrapper">
-        <div class="testimonials-header">
+        <div class="testimonials-header" data-aos="fade-up" data-aos-duration="700">
           <h2 class="testimonials-header_title">
             Kind Words From Our Customers
           </h2>
@@ -791,10 +820,10 @@
           <div class="testimonials-content">
 
             <swiper-container
-            class="testimonialSwiper" init="false"
+            class="testimonialSwiper" init="false" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700"
             >
               <!-- Slide 1 -->
-              <swiper-slide>
+              <swiper-slide >
                 <div class="testimonials-card">
                   <div class="stars">
                     <img src="assets/Star 1.svg" alt="star">
@@ -909,7 +938,7 @@
               
             </swiper-container>
           
-                <div class="testimonial-btn_container">
+                <div class="testimonial-btn_container"  data-aos="fade-in" data-aos-delay="500" data-aos-duration="700">
                   <button class="arrow-left">
                     <img src="assets/arrow-left.svg" alt="btn-icon">
                   </button>
@@ -922,7 +951,7 @@
       </div>
     </section>
 
-    <section class="cta">
+    <section class="cta" data-aos="fade-in" data-aos-duration="700">
       <div class="cta-card">
         <div class="cta-content">
           <div class="cta-text">
@@ -950,7 +979,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer data-aos="fade-in" data-aos-duration="800">
       <div class="footer-wrapper">
         <div class="footer-content">
 
@@ -1023,9 +1052,20 @@
       </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out',
+        once: true,
+        offset: 100,
+      });
+    </script>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

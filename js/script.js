@@ -1,30 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ====== SWIPER TESTIMONIALS (Web Component) ======
-  customElements.whenDefined('swiper-container').then(() => {
-    const swiperEl = document.querySelector('.testimonialSwiper');
-    const btnPrev = document.querySelector('.arrow-left');
-    const btnNext = document.querySelector('.arrow-right');
+  customElements.whenDefined("swiper-container").then(() => {
+    const swiperEl = document.querySelector(".testimonialSwiper");
+    const btnPrev = document.querySelector(".arrow-left");
+    const btnNext = document.querySelector(".arrow-right");
 
     if (swiperEl) {
       Object.assign(swiperEl, {
         slidesPerView: 1,
         spaceBetween: 24,
         loop: true,
+        centeredSlides: true,
         breakpoints: {
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }
+        640: { 
+          slidesPerView: 1,
+          centeredSlides: true 
+        },
+        1024: { 
+          slidesPerView: 3,
+          centeredSlides: false 
+        },
         }
-      });
+      }
+    );
 
-      swiperEl.addEventListener('swiperinit', () => {
+      swiperEl.addEventListener("swiperinit", () => {
         if (btnPrev) {
-          btnPrev.addEventListener('click', () => {
+          btnPrev.addEventListener("click", () => {
             swiperEl.swiper.slidePrev();
           });
         }
 
         if (btnNext) {
-          btnNext.addEventListener('click', () => {
+          btnNext.addEventListener("click", () => {
             swiperEl.swiper.slideNext();
           });
         }
@@ -67,17 +75,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ====== SWIPER BENEFITS (Swiper JS) ======
-  // UBAH INI - gunakan .benefits sebagai container
-  const benefitsContainer = document.querySelector(".benefits-card_list.swiper");
-  const benefitsPrev = document.querySelector(".swiper-button-prev-custom");
-  const benefitsNext = document.querySelector(".swiper-button-next-custom");
+  const benefitsContainer = document.querySelector(
+    ".benefits-card_list.swiper"
+  );
+  const benefitsPrev = document.querySelector(".benefits-navigation .swiper-button-prev-custom");
+  const benefitsNext = document.querySelector(".benefits-navigation .swiper-button-next-custom");
 
   if (benefitsContainer && benefitsPrev && benefitsNext) {
     const swiperBenefits = new Swiper(benefitsContainer, {
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 20,
-      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: false,
       navigation: {
         nextEl: benefitsNext,
         prevEl: benefitsPrev,
@@ -86,16 +94,81 @@ document.addEventListener("DOMContentLoaded", () => {
         993: {
           slidesPerView: 3,
           spaceBetween: 32,
-          centeredSlides: false,
           allowTouchMove: false,
-        }
-      }
+        },
+      },
     });
   } else {
-    console.warn('Benefits Swiper: Elemen tidak ditemukan', {
+    console.warn("Benefits Swiper: Elemen tidak ditemukan", {
       container: !!benefitsContainer,
       prevBtn: !!benefitsPrev,
-      nextBtn: !!benefitsNext
+      nextBtn: !!benefitsNext,
     });
   }
+
+   const citiesContainer = document.querySelector(".cities-card_list.swiper");
+  const citiesPrev = document.querySelector(".cities-navigation .swiper-button-prev-custom");
+  const citiesNext = document.querySelector(".cities-navigation .swiper-button-next-custom");
+
+  if (citiesContainer && citiesPrev && citiesNext) {
+    new Swiper(citiesContainer, {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: false,
+      navigation: {
+        nextEl: citiesNext,
+        prevEl: citiesPrev,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        993: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+          allowTouchMove: false, 
+        },
+      },
+    });
+  } else {
+    console.warn("Cities Swiper: Elemen tidak ditemukan", {
+      container: !!citiesContainer,
+      prevBtn: !!citiesPrev,
+      nextBtn: !!citiesNext,
+    });
+  }
+
+  const agentsContainer = document.querySelector(".agents-grid.swiper");
+let agentsSwiper = undefined;
+
+function initAgentsSwiper() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 992) {
+    // Aktifkan Swiper hanya di Mobile & Tablet
+    if (agentsSwiper === undefined && agentsContainer) {
+      agentsSwiper = new Swiper(agentsContainer, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+        breakpoints: {
+          640: { slidesPerView: 2, spaceBetween: 24 }
+        }
+      });
+    }
+  } else {
+    
+    if (agentsSwiper !== undefined) {
+      agentsSwiper.destroy(true, true);
+      agentsSwiper = undefined;
+    }
+  }
+}
+
+window.addEventListener("load", initAgentsSwiper);
+window.addEventListener("resize", initAgentsSwiper);
 });
