@@ -140,35 +140,43 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const agentsContainer = document.querySelector(".agents-grid.swiper");
-let agentsSwiper = undefined;
+  let agentsSwiper = undefined;
 
-function initAgentsSwiper() {
-  const screenWidth = window.innerWidth;
+  function initAgentsSwiper() {
+    const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 992) {
-    // Aktifkan Swiper hanya di Mobile & Tablet
-    if (agentsSwiper === undefined && agentsContainer) {
-      agentsSwiper = new Swiper(agentsContainer, {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        navigation: {
-          nextEl: ".swiper-button-next-custom",
-          prevEl: ".swiper-button-prev-custom",
-        },
-        breakpoints: {
-          640: { slidesPerView: 2, spaceBetween: 24 }
-        }
-      });
-    }
-  } else {
-    
-    if (agentsSwiper !== undefined) {
-      agentsSwiper.destroy(true, true);
-      agentsSwiper = undefined;
+    if (screenWidth <= 992) {
+      if (agentsSwiper === undefined && agentsContainer) {
+        agentsSwiper = new Swiper(agentsContainer, {
+          slidesPerView: 1,
+          spaceBetween: 16,
+          loop: false,
+          navigation: {
+            nextEl: ".agents-navigation .swiper-button-next-custom",
+            prevEl: ".agents-navigation .swiper-button-prev-custom",
+          },
+          breakpoints: {
+            640: { 
+              slidesPerView: 2, 
+              spaceBetween: 24 
+            }
+          }
+        });
+        console.log("Agents Swiper: Activated (Mobile/Tablet)");
+      }
+    } else {
+      // Di 993px ke atas: DESTROY Swiper dan gunakan CSS Grid
+      if (agentsSwiper !== undefined) {
+        agentsSwiper.destroy(true, true);
+        agentsSwiper = undefined;
+        console.log("Agents Swiper: Destroyed (Desktop - Using CSS Grid)");
+      }
     }
   }
-}
 
-window.addEventListener("load", initAgentsSwiper);
-window.addEventListener("resize", initAgentsSwiper);
+  // Init on load
+  window.addEventListener("load", initAgentsSwiper);
+  
+  // Re-init on resize
+  window.addEventListener("resize", initAgentsSwiper);
 });

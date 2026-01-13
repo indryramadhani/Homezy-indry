@@ -12,12 +12,15 @@
     font-style: normal;
   }
 
+  * {
+    max-width: 1440px;
+  }
 
   html, body {
     font-family: "Hanken Grotesk", sans-serif;
     background: #FBFAFF;
     overflow-x: hidden;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -29,10 +32,13 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
+    max-width: 1440px;
     z-index: 50;
     background: #FBFAFF;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .logo-container {
@@ -194,9 +200,8 @@ nav ul li a svg {
     flex-direction: row; 
     align-items: center;
     justify-content: space-between;
-    padding: 80px 10%; 
+    padding: 160px 10%; 
     gap: 8px;
-    min-height: 100vh; 
 }
 
 .hero::before {
@@ -332,9 +337,9 @@ nav ul li a svg {
 .hero-right-content {
     position: relative;
     margin: 0;
-    width: 514px; 
+    width: 100%;
+    max-width: 514px; 
     height: 528px; 
-    flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 40%;
     z-index: 1;
@@ -342,7 +347,7 @@ nav ul li a svg {
 
 .top-house_wrapper {
     position: absolute;
-    max-width: 238px;
+    max-width: 48%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -395,7 +400,7 @@ nav ul li a svg {
 .bottom-house {
     position: absolute;
     overflow: hidden;
-    max-width: 238px;
+    max-width: 48%;
     height: 340px;
     bottom: 0;
     right: 0;
@@ -793,7 +798,7 @@ nav ul li a svg {
 
 .badge-small {
   position: absolute; 
-  top: 174px;          
+  top: 42%;          
   left: -8px;         
   z-index: 10;           
 }
@@ -1938,7 +1943,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 5%;
     box-sizing: border-box;
     z-index: 1000;
     position: fixed;
@@ -2206,8 +2211,8 @@ li.dropdown.active > a i {
     }
 
     .top-house_wrapper {
-        left: 0;
-        max-width: 161px;
+        left: 4%;
+        width: 45%;
     }
 
     .top-house_image {
@@ -2217,6 +2222,7 @@ li.dropdown.active > a i {
     .image-caption {
         padding: 12px;
         height: auto;
+        justify-content: center;
     }
 
     .image-caption p {
@@ -2224,8 +2230,8 @@ li.dropdown.active > a i {
     }
 
     .bottom-house {
-        right: 0;
-        max-width: 161px;
+        right: 4%;
+        width: 45%;
         height: 250px;
         top: 50%;
     }
@@ -2742,7 +2748,7 @@ li.dropdown.active > a i {
 
   .cta-card {
     padding: 24px;
-    max-width: 335px;
+    width: auto;
     height: 540px;
     margin: 0 auto;
     border-radius: 15px;
@@ -2855,67 +2861,653 @@ li.dropdown.active > a i {
 
 
 /* Desktop Reset */
-@media screen and (min-width: 993px) {
-    .menu-toggle, .sidebar-header, .sidebar-footer {
-    display: none; 
-}
-   
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+   .menu-toggle, 
+    .sidebar-header, 
+    .sidebar-footer {
+        display: none; 
+    }
+
+    /* ===== HEADER ===== */
+    header {
+        padding: 20px 5%;
+        max-width: 1440px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .logo-img {
+        width: 2rem;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
     nav {
-        position: static;
-        height: auto;
-        width: auto;
-        background: transparent;
-        display: flex;
-        right: auto;
+        gap: 24px;
+    }
+
+    nav ul {
+        gap: 24px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
 
     .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 100%;
+        padding: 20px;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: repeat(2, 160px);
+        gap: 10px 14px;
+    }
+
+    .dropdown-grid a {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+        padding: 130px 5%;
+        gap: 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero::before {
+        background-size: 42%;
+    }
+
+    /* Hero Left Content */
+    .hero-left-content {
+        flex: 1;
+        max-width: 480px;
+        min-width: 0;
+        gap: 24px;
+    }
+
+    .hero-text {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+        line-height: 58px;
+        max-width: 100%;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Search Box */
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        gap: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .search-item {
+        flex: 1;
+        min-width: 95px;
+        max-width: 120px;
+        gap: 8px;
+    }
+
+    .search-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .search-info {
+        min-width: 0;
+    }
+
+    .search-label {
+        font-size: 11px;
+        line-height: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .search-value {
+        font-size: 13px;
+        line-height: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .browse-btn {
+        padding: 14px 22px;
+        font-size: 0.9rem;
+        line-height: 20px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Hero Right Content */
+    .hero-right-content {
+        width: 380px;
+        min-width: 360px;
+        max-width: 380px;
+        height: 400px;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    /* Profile Card */
+    .profile-card {
+        width: 190px;
+        padding: 12px;
+        top: 5%;
+        right: 5%;
+    }
+
+    .profile-card_name {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .profile-card_role {
+        font-size: 10px;
+    }
+
+    .profile-card_avatar img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .profile-card_socials {
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .profile-card_socials span {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* House Images */
+    .top-house_wrapper {
+        max-width: 48%;
         left: 0;
-        background-color: #ffffff;
+    }
+
+    .top-house_image {
+        height: 180px;
+    }
+
+    .image-caption {
+        padding: 12px;
+        min-height: 75px;
+        height: auto;
+    }
+
+    .image-caption p {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .bottom-house {
+        max-width: 48%;
+        height: 250px;
+        bottom: 0;
+        right: 0;
+    }
+
+    /* Featured Section */
+    .featured {
+        padding: 64px 5%;
+    }
+
+    .featured-title {
+        font-size: 36px;
+    }
+
+    .featured_link-all {
+        font-size: 14px;
+    }
+
+    /* Featured Large Card */
+    .featured-card_large {
+        max-height: 380px;
+    }
+
+    .featured-image_large img {
+        max-height: 380px;
+    }
+
+    .card-featured_content {
+        padding: 20px 24px;
+        gap: 24px;
+    }
+
+    .large-price_value {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .large-price_duration {
+        font-size: 16px;
+    }
+
+    .large-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .large-location,
+    .large-desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .large-agent {
+        gap: 16px;
+    }
+
+    .agent-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .agent-name {
+        font-size: 14px;
+    }
+
+    .agent-role {
+        font-size: 12px;
+    }
+
+    .agents-grid.swiper {
+        overflow: visible; 
+    }
+
+    .agents-grid .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ; 
+        grid-template-rows: repeat(2, auto) ;
+        gap: 24px 32px; 
+        transform: none; 
+        width: 100%;
+    }
+
+    .agents-card.swiper-slide {
+        width: 100%; 
+        margin: 0;
+        height: 140px;
+    }
+
+    .agents-navigation {
+        display: none;
+    }
+
+    .benefits-navigation,
+    .cities-navigation {
+        display: none;
+    }
+
+    /* Property Card */
+    .property-card {
+        padding: 16px;
+        gap: 24px;
+        max-width: 100%;
+    }
+
+    .property-item .label {
+        font-size: 14px;
+    }
+
+    .property-item .value {
+        font-size: 14px;
+    }
+
+    /* Featured Small Cards */
+    .featured-list-small {
+        gap: 24px;
+    }
+
+    .card-small {
+        max-height: 380px;
+    }
+
+    .card-small_content {
+        padding: 20px 24px;
+    }
+
+    .card-small_price {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .badge-small {
+        position: absolute;
+        top: 114px !important; /* Tetap di posisi yang sama seperti desktop besar */
+        left: -8px;
+        z-index: 10;
+    }
+
+    .card-small_title {
+        font-size: 20px;
+    }
+
+    .card-small_location {
+        font-size: 14px;
+    }
+
+    /* Benefits Section */
+    .benefits {
+        padding: 64px 5%;
+    }
+
+    .benefits-header_title {
+        font-size: 40px;
+        max-width: 380px;
+    }
+
+    .benefits-header_description {
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 380px;
+    }
+
+    .benefits-card.swiper-slide {
         padding: 32px;
-        border-radius: 24px;
-        box-shadow: 24px 28px 92px 0px rgba(54, 17, 102, 0.12);
-        z-index: 999;
-        margin-top: 15px;
+        height: 320px;
     }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
+    .benefits-icon_wrapper {
+        width: 80px;
+        height: 80px;
     }
 
-    .dropdown:hover .arrow-icon {
-        transform: rotate(180deg);
+    .benefits-title {
+        font-size: 22px;
+        line-height: 30px;
     }
 
-  .benefits-navigation {
-    display: none !important;
-  }
+    .benefits-text {
+        font-size: 15px;
+        line-height: 24px;
+    }
 
-  .agents-grid.swiper {
-    overflow: visible; 
-  }
+    /* Categories Section */
+    .categories {
+        padding: 64px 5%;
+    }
 
-  .agents-grid .swiper-wrapper {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 32px 40px; 
-    transform: none !important; 
-    width: 100% !important;
-  }
+    .categories-header_title,
+    .cities-header_title,
+    .agents-header_title,
+    .testimonials-header_title {
+        font-size: 40px;
+    }
 
-  .agents-card.swiper-slide {
-    width: 100% !important; 
-    margin: 0 !important;
-    height: 156px;
-  }
+    .categories-card {
+        padding: 20px;
+    }
 
-  .agents-navigation {
-    display: none !important;
-  }
+    .categories-card_icon-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+
+    .categories-card_icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .categories-card_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .categories-card_count {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* Cities Section */
+    .cities {
+        padding: 64px 5%;
+    }
+
+    .cities-card_text {
+        padding: 20px;
+    }
+
+    .cities-card_name {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cities-card_count {
+        font-size: 16px;
+    }
+
+    /* Agents Section */
+    .agents {
+        padding: 64px 5%;
+    }
+
+    .agents-grid .swiper-wrapper {
+        gap: 24px 32px !important;
+    }
+
+    .agents-card.swiper-slide {
+        height: 140px;
+        padding: 20px;
+    }
+
+    .agents-name {
+        font-size: 18px;
+    }
+
+    .agents-role {
+        font-size: 16px;
+    }
+
+    .agents-socials {
+        gap: 10px;
+    }
+
+    .agents-socials span {
+        width: 22px;
+        height: 22px;
+    }
+
+    .agent-photo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-wrapper {
+        padding: 64px 0;
+        gap: 56px;
+    }
+
+    .testimonials-container {
+        padding: 48px 5% 32px 5%;
+    }
+
+    .testimonials-card {
+        padding: 28px;
+        min-width: 300px;
+    }
+
+    .testimonial-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .user-name {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .user-role {
+        font-size: 16px;
+    }
+
+    .company-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 64px 5% 0 5%;
+    }
+
+    .cta-card {
+        padding: 48px 56px;
+    }
+
+    .cta-title {
+        font-size: 40px;
+        line-height: 48px;
+        max-width: 340px;
+    }
+
+    .cta-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .newsletter-input {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+
+    .newsletter-btn {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 56px 5% 28px 5%;
+    }
+
+    .footer-content {
+        margin-bottom: 64px;
+    }
+
+    .footer-brand {
+        max-width: 320px;
+    }
+
+    .footer-description {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .footer-links {
+        gap: 80px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 140px);
+        gap: 14px 64px;
+    }
+
+    .grid-container a,
+    .list-vertical a {
+        font-size: 15px;
+    }
+
+    .footer-label {
+        font-size: 15px;
+    }
 }
+
+@media screen and (min-width: 1201px) {
+    .menu-toggle, 
+    .sidebar-header, 
+    .sidebar-footer {
+        display: none; 
+    }
+
+    /* Semua nilai kembali ke original */
+    header {
+        padding: 24px 10%;
+        max-width: 1440px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .logo-img {
+        width: 2.5rem;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        gap: 64px;
+    }
+
+    nav ul {
+        gap: 64px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        padding: 16px 32px;
+        font-size: 1.125rem;
+    }
+
+    .dropdown-content {
+        padding: 32px;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: repeat(2, 220px);
+        gap: 16px 24px;
+    }
+
+    .dropdown-grid a {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .agents-grid .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ; 
+        grid-template-rows: repeat(2, auto) ;
+        gap: 24px 32px; 
+        transform: none; 
+        width: 100%;
+    }
+  }
 
 
 @media (max-width: 768px) {
@@ -2926,3 +3518,568 @@ li.dropdown.active > a i {
     grid-template-columns: 1fr; 
   }
 }
+
+@media screen and (max-width: 375px) {
+  
+  /* HEADER */
+  header {
+    padding: 16px;
+  }
+
+  .logo-img {
+    width: 1.75rem;
+  }
+
+  .logo-text {
+    font-size: 1.125rem;
+  }
+
+  .menu-toggle .bar {
+    width: 24px;
+  }
+
+  nav {
+    max-width: 100%;
+    padding: 24px 16px 16px 16px;
+  }
+
+  .sidebar-header {
+    margin-bottom: 8px;
+  }
+
+  nav ul li a {
+    padding: 12px 0;
+    font-size: 15px;
+  }
+
+  .dropdown-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .dropdown-grid a {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+
+  .contact-btn-sidebar {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 80px 5%;
+    gap: 32px;
+    overflow: hidden;
+  }
+
+  .hero-left-content {
+    width: 100%;
+  }
+
+  .hero-right-content {
+    width: 100%;       
+    max-width: 100%;
+    min-width: 0;      
+    height: 350px;     
+    position: relative;
+    margin: 0 auto;    
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .search-box {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .search-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .search-label {
+    font-size: 13px;
+  }
+
+  .search-value {
+    font-size: 15px;
+  }
+
+  .browse-btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .hero-right-content {
+    height: 320px;
+  }
+
+  .top-house_image {
+    height: 150px;
+  }
+
+  .image-caption {
+    padding: 10px;
+    height: auto;
+  }
+
+  .image-caption p {
+    font-size: 9px;
+  }
+
+  .bottom-house {
+    height: 220px;
+  }
+
+  .profile-card {
+    width: 140px;
+    padding: 10px;
+    left: 35%;
+  }
+
+  .profile-card_name {
+    font-size: 8px;
+  }
+
+  .profile-card_role {
+    font-size: 7px;
+  }
+
+  .profile-card_avatar img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .profile-card_socials {
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .profile-card_socials span {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* FEATURED SECTION */
+  .featured {
+    padding: 56px 5%;
+  }
+
+  .featured-title {
+    font-size: 28px;
+  }
+
+  .featured_link-all {
+    font-size: 15px;
+  }
+
+  .card-featured_content {
+    padding: 10px 12px;
+  }
+
+  .large-price_value {
+    font-size: 32px;
+  }
+
+  .large-price_duration {
+    font-size: 16px;
+  }
+
+  .large-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .large-location,
+  .large-desc {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .large-link {
+    font-size: 15px;
+  }
+
+  .agent-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .agent-name {
+    font-size: 15px;
+  }
+
+  .agent-role {
+    font-size: 13px;
+  }
+
+  .property-card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+
+  .icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-small_content {
+    padding: 16px 24px;
+  }
+
+  .card-small_price {
+    font-size: 24px;
+  }
+
+  .card-small_title {
+    font-size: 20px;
+  }
+
+  .card-small_location {
+    font-size: 15px;
+  }
+
+  .small-property_card {
+    gap: 10px;
+  }
+
+  .prop-item span {
+    font-size: 13px;
+  }
+
+  /* BENEFITS SECTION */
+  .benefits {
+    padding: 56px 5%;
+  }
+
+  .benefits-header_title {
+    font-size: 28px;
+  }
+
+  .benefits-header_description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .benefits-card.swiper-slide {
+    padding: 20px;
+    height: auto;
+    min-height: 280px;
+    max-width: 335px;
+  }
+
+  .benefits-icon_wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .benefits-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .benefits-text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* CATEGORIES SECTION */
+  .categories {
+    padding: 56px 5%;
+  }
+
+  .categories-header_title {
+    font-size: 28px;
+  }
+
+  .categories-header_link {
+    font-size: 16px;
+  }
+
+  .categories-card {
+    padding: 16px;
+    gap: 12px;
+    min-height: 92px;
+  }
+
+  .categories-card_icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .categories-card_icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .categories-card_title {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .categories-card_count {
+    font-size: 12px;
+  }
+
+  .categories-card_link {
+    font-size: 12px;
+  }
+
+  /* CITIES SECTION */
+  .cities {
+    padding: 56px 5%;
+  }
+
+  .cities-header_title {
+    font-size: 28px;
+  }
+
+  .cities-card_image {
+    height: 220px;
+  }
+
+  .cities-card_text {
+    padding: 16px;
+  }
+
+  .cities-card_name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .cities-card_count {
+    font-size: 15px;
+  }
+
+  .cities-card_icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* AGENTS SECTION */
+  .agents {
+    padding: 56px 5%;
+  }
+
+  .agents-header_title {
+    font-size: 28px;
+  }
+
+  .agents-card.swiper-slide {
+    padding: 14px;
+    height: auto;
+    min-height: 140px;
+  }
+
+  .agents-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .agents-role {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .agents-socials {
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .agents-socials span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .agent-photo img {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* TESTIMONIALS SECTION */
+  .testimonials {
+    padding: 56px 5%;
+  }
+
+  .testimonials-header_title {
+    font-size: 28px;
+  }
+
+  .testimonials-card {
+    padding: 48px 16px;
+  }
+
+  .stars {
+    margin-bottom: 24px;
+  }
+
+  .stars img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .user-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .user-role {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .company-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .testimonial-btn_container {
+    margin-top: 32px;
+    gap: 12px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    padding: 12px;
+  }
+
+  .arrow-left img,
+  .arrow-right img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* CTA SECTION */
+  .cta {
+    padding: 56px 5% 0 5%;
+  }
+
+  .cta-card {
+    padding: 20px;
+    height: 500px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .newsletter-input {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .newsletter-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 56px 5% 24px 5%;
+  }
+
+  .footer-wrapper {
+    gap: 40px;
+  }
+
+  .footer-content {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand {
+    gap: 20px;
+  }
+
+  .footer-logo {
+    width: 2rem;
+  }
+
+  .footer-logo_text {
+    font-size: 1.25rem;
+  }
+
+  .footer-description {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .footer-socials span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+
+  .footer-column {
+    gap: 24px;
+  }
+
+  .footer-label {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .grid-container a,
+  .list-vertical a {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .list-vertical {
+    gap: 12px;
+  }
+
+  .copyright-text {
+    font-size: 14px;
+  }
+
+  /* NAVIGATION BUTTONS */
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    padding: 12px;
+  }
+
+  .swiper-button-prev-custom img,
+  .swiper-button-next-custom img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
