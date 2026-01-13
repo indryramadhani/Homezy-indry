@@ -256,9 +256,10 @@ nav ul li a svg {
 }
 
 .search-box {
+    max-width: 763px;
     display: flex;
     justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
     align-items: center;
     padding: 20px;
     background-color: #FFFFFF;
@@ -268,6 +269,7 @@ nav ul li a svg {
 }
 
 .search-item {
+    width: 170px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1986,7 +1988,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
-    padding: 32px 20px; 
+    padding: 32px 20px 20px 20px; 
     transition: 0.4s ease-in-out;
     z-index: 9999;
     box-sizing: border-box;
@@ -2025,12 +2027,12 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-     position: relative;
     align-items: flex-start;
     gap: 0; 
     padding: 0;
     margin: 0;
     flex-shrink: 0;
+    margin-bottom: 20px;
 }
 
 nav ul li {
@@ -2042,12 +2044,14 @@ nav ul li {
 
 nav ul li a {
     padding: 16px 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #191A23;
     text-decoration: none;
     width: 100%;
     text-align: left;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .sidebar-header {
@@ -2058,26 +2062,43 @@ nav ul li a {
     margin-top: 2px;
 }
 
+.dropdown {
+        position: relative;
+        width: 100%;
+    }
+
 .dropdown-content {
     display: none; 
     width: 100%;
-    padding: 4px;
+    padding: 16px;
+    background-color: #F7F2FF;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: static !important;
+    z-index: auto;
+    box-sizing: border-box;
 }
 
 .dropdown-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  gap: 8px 12px;
+  gap: 4px 8px;
+  margin: 0;
 }
 
 li.dropdown.active .dropdown-content {
     display: block;
 }
 
-.dropdown-content a {
-    padding: 6px 0;
+.dropdown-grid a {
+    padding: 8px 0;
     font-size: 14px;
-    color: #666;
+    color: #191A23;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 nav ul li a i {
@@ -2092,7 +2113,9 @@ li.dropdown.active > a i {
     .sidebar-footer {
     width: 100%;
     margin-top: auto;
-    padding-bottom: 8px;
+    padding: 16px 0 0 0;
+    border-top: 1px solid #F3F0FF; /* Tambah border top */
+    flex-shrink: 0;
 }
 
     .contact-btn-sidebar {
@@ -2108,7 +2131,7 @@ li.dropdown.active > a i {
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
     .hero {
@@ -2375,7 +2398,7 @@ li.dropdown.active > a i {
   }
 
   .benefits-card.swiper-slide {
-    width: 287px;
+    max-height: 316px;
     padding: 24px;
     gap: 40px; 
   }
@@ -2483,7 +2506,6 @@ li.dropdown.active > a i {
 
   .cities-card.swiper-slide {
     width: 100%;
-    max-width: 100%;
     flex: none;
   }
 
@@ -2529,7 +2551,7 @@ li.dropdown.active > a i {
 
   .agents-grid.swiper {
     display: block !important; 
-    overflow: visible; 
+    overflow: hidden; 
     width: 100%;
     padding: 0; 
   }
@@ -2541,9 +2563,8 @@ li.dropdown.active > a i {
 
   .agents-card.swiper-slide {
     width: 100%; 
-    max-width: 335px;
     height: auto;
-    min-height: 120px; 
+    min-height: 156px; 
     flex-shrink: 0;
     padding: 16px; 
     display: flex;
@@ -2645,13 +2666,11 @@ li.dropdown.active > a i {
 
   swiper-slide {
     width: 100% !important;
-    max-width: 335px;
     height: auto;
   }
 
   .testimonials-card {
     width: 100%;
-    max-width: 335px;
     min-width: auto;
     padding: 64px 20px;
     gap: 8px;
@@ -2848,6 +2867,27 @@ li.dropdown.active > a i {
         background: transparent;
         display: flex;
         right: auto;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        padding: 32px;
+        border-radius: 24px;
+        box-shadow: 24px 28px 92px 0px rgba(54, 17, 102, 0.12);
+        z-index: 999;
+        margin-top: 15px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .arrow-icon {
+        transform: rotate(180deg);
     }
 
   .benefits-navigation {
